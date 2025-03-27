@@ -1,0 +1,216 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+The ptp_data[          1] :011b19000000000f
+
+The ptp_data[          2] :538b219088f70012
+
+The ptp_data[          3] :002c000002000000
+
+The ptp_data[          4] :0000000000000000
+
+The ptp_data[          5] :0000000f53fffe8b
+
+The ptp_data[          6] :2190000102040000
+
+The ptp_data[          7] :0000000000000000
+
+The ptp_data[          8] :0000000000000000
+
+The ptp_data[          9] :011b19000000000f
+
+The ptp_data[         10] :538b219088f70812
+
+The ptp_data[         11] :002c000000000000
+
+The ptp_data[         12] :0000000000000000
+
+The ptp_data[         13] :0000000f53fffe8b
+
+The ptp_data[         14] :2190000102040000
+
+The ptp_data[         15] :0000664c54363646
+
+The ptp_data[         16] :8ff4000000000000
+
+The ptp_data[         17] :011b19000000000f
+
+                 166 req1 frame transmit successful!
+The ptp_data[         18] :538b219088f70912
+
+The ptp_data[         19] :0036000000000000
+
+The ptp_data[         20] :0000000000000000
+
+The ptp_data[         21] :0000000f53fffe8b
+
+The ptp_data[         22] :2190000100000000
+
+The ptp_data[         23] :0000664c54363647
+
+The ptp_data[         24] :284c643f5ffffe02
+
+The ptp_data[         25] :118d000100000000
+
+The ptp_data[         26] :011b19000000000f
+
+The ptp_data[         27] :538b219088f70012
+
+The ptp_data[         28] :002c000002000000
+
+The ptp_data[         29] :0000000000000000
+
+The ptp_data[         30] :0000000f53fffe8b
+
+The ptp_data[         31] :2190000102050000
+
+The ptp_data[         32] :0000000000000000
+
+The ptp_data[         33] :0000000000000000
+
+The ptp_data[         34] :011b19000000000f
+
+The ptp_data[         35] :538b219088f70812
+
+The ptp_data[         36] :002c000000000000
+
+The ptp_data[         37] :0000000000000000
+
+The ptp_data[         38] :0000000f53fffe8b
+
+The ptp_data[         39] :2190000102050000
+
+The ptp_data[         40] :0000664c54363647
+
+The ptp_data[         41] :28b0000000000000
+
+The ptp_data[         42] :011b19000000000f
+
+The ptp_data[         43] :538b219088f70912
+
+The ptp_data[         44] :0036000000000000
+
+The ptp_data[         45] :0000000000000000
+
+The ptp_data[         46] :0000000f53fffe8b
+
+The ptp_data[         47] :2190000100010000
+
+The ptp_data[         48] :0000664c54363647
+
+The ptp_data[         49] :8a58643f5ffffe02
+
+The ptp_data[         50] :118d000100000000
+
+               39230go on next ptp test!
+               39370 req2 frame transmit successful!
+               64434go on next ptp test!
+               64574 req3 frame transmit successful!
+               83698finished!
+$stop called at time : 83698 ns : File "E:/Project/PTP/ptp/ptp.sim/ptp_syn_tb.v" Line 187
+The ptp_data[          1] :011b19000000000f
+
+The ptp_data[          2] :538b219088f70012
+
+The ptp_data[          3] :002c000002000000
+
+The ptp_data[          4] :0000000000000000
+
+The ptp_data[          5] :0000000f53fffe8b
+
+The ptp_data[          6] :2190000102040000
+
+The ptp_data[          7] :0000000000000000
+
+The ptp_data[          8] :0000000000000000
+
+The ptp_data[          9] :011b19000000000f
+
+The ptp_data[         10] :538b219088f70812
+
+The ptp_data[         11] :002c000000000000
+
+The ptp_data[         12] :0000000000000000
+
+The ptp_data[         13] :0000000f53fffe8b
+
+The ptp_data[         14] :2190000102040000
+
+The ptp_data[         15] :0000664c54363646
+
+The ptp_data[         16] :8ff4000000000000
+
+The ptp_data[         17] :011b19000000000f
+
+                 166 req1 frame transmit successful!
+The ptp_data[         18] :538b219088f70912
+
+The ptp_data[         19] :0036000000000000
+
+The ptp_data[         20] :0000000000000000
+
+The ptp_data[         21] :0000000f53fffe8b
+
+The ptp_data[         22] :2190000100000000
+
+The ptp_data[         23] :0000664c54363647
+
+The ptp_data[         24] :284c643f5ffffe02
+
+The ptp_data[         25] :118d000100000000
+
+The ptp_data[         26] :011b19000000000f
+
+The ptp_data[         27] :538b219088f70012
+
+The ptp_data[         28] :002c000002000000
+
+The ptp_data[         29] :0000000000000000
+
+The ptp_data[         30] :0000000f53fffe8b
+
+The ptp_data[         31] :2190000102050000
+
+The ptp_data[         32] :0000000000000000
+
+The ptp_data[         33] :0000000000000000
+
+The ptp_data[         34] :011b19000000000f
+
+The ptp_data[         35] :538b219088f70812
+
+The ptp_data[         36] :002c000000000000
+
+The ptp_data[         37] :0000000000000000
+
+The ptp_data[         38] :0000000f53fffe8b
+
+The ptp_data[         39] :2190000102050000
+
+The ptp_data[         40] :0000664c54363647
+
+The ptp_data[         41] :28b0000000000000
+
+The ptp_data[         42] :011b19000000000f
+
+The ptp_data[         43] :538b219088f70912
+
+The ptp_data[         44] :0036000000000000
+
+The ptp_data[         45] :0000000000000000
+
+The ptp_data[         46] :0000000f53fffe8b
+
+The ptp_data[         47] :2190000100010000
+
+The ptp_data[         48] :0000664c54363647
+
+The ptp_data[         49] :8a58643f5ffffe02
+
+The ptp_data[         50] :118d000100000000
+
+               39230go on next ptp test!
+               39370 req2 frame transmit successful!
+               64434go on next ptp test!
+               64574 req3 frame transmit successful!
+               83698finished!
+$stop called at time : 83698 ns : File "E:/Project/PTP/ptp/ptp.sim/ptp_syn_tb.v" Line 187

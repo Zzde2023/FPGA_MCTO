@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FlowCtrl.srcs/field_extract.v" \
+"../../../../FlowCtrl.srcs/flow_ctrl.v" \
+"../../../../FlowCtrl.srcs/frame_parse.v" \
+"../../../../FlowCtrl.srcs/sync_fifo.v" \
+"../../../../FlowCtrl.srcs/vabus_mux.v" \
+"../../../fifo_test_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
