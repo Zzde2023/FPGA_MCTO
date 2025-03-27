@@ -1,0 +1,92 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto e6b4e91192644286a525dcf0dd8e19b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ptp_syn_tb_behav xil_defaultlib.ptp_syn_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'clk_net' is not connected on this instance [E:/Project/PTP/ptp/ptp.sim/ptp_syn_tb.v:222]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_syn.v" Line 39. Module ptp_syn doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_sync_parse.v" Line 9. Module ptp_sync_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_flup_parse.v" Line 9. Module ptp_flup_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_resp_parse.v" Line 9. Module ptp_resp_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=58) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_req_framegen.v" Line 6. Module ptp_req_framegen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/vabus_mux.v" Line 6. Module vabus_mux doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_syn.v" Line 39. Module ptp_syn doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_sync_parse.v" Line 9. Module ptp_sync_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_flup_parse.v" Line 9. Module ptp_flup_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_resp_parse.v" Line 9. Module ptp_resp_parse doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=1,OFFSET=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=34) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=2,OFFSET=44) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=48) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/field_extract.v" Line 9. Module field_extract(BYTES=10,OFFSET=58) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/ptp_req_framegen.v" Line 6. Module ptp_req_framegen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Project/PTP/ptp/ptp.srcs/vabus_mux.v" Line 6. Module vabus_mux doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling module xil_defaultlib.field_extract(BYTES=2,OFFSET=12)
+Compiling module xil_defaultlib.field_extract(BYTES=1,OFFSET=14)
+Compiling module xil_defaultlib.field_extract(BYTES=10,OFFSET=34...
+Compiling module xil_defaultlib.field_extract(BYTES=2,OFFSET=44)
+Compiling module xil_defaultlib.field_extract(BYTES=10,OFFSET=48...
+Compiling module xil_defaultlib.ptp_sync_parse
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_dist_mem [\ccm_dist_mem(c_addr_width=6,c_d...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_syncmem [\ccm_syncmem(c_xdevicefamily="ki...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_scaled_adder [\ccm_scaled_adder(a_width=27,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_scaled_adder [\ccm_scaled_adder(a_width=34,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_scaled_adder [\ccm_scaled_adder(a_width=47,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="kin...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm_operation [\ccm_operation(c_xdevicefamily="...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.ccm [\ccm(c_xdevicefamily="kintexu",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16_viv [\mult_gen_v12_0_16_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16 [\mult_gen_v12_0_16(c_xdevicefami...]
+Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult_gen_0_default]
+Compiling module xil_defaultlib.ptp_flup_parse
+Compiling module xil_defaultlib.field_extract(BYTES=10,OFFSET=58...
+Compiling module xil_defaultlib.ptp_resp_parse
+Compiling module xil_defaultlib.ptp_req_framegen
+Compiling module xil_defaultlib.vabus_mux
+Compiling module xil_defaultlib.ptp_syn
+Compiling module xil_defaultlib.ptp_syn_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ptp_syn_tb_behav

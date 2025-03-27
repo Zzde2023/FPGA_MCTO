@@ -1,0 +1,369 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 25 15:51:29 2025
+# Process ID: 86248
+# Current directory: F:/Project/PTP/ptp/ptp.runs/synth_1
+# Command line: vivado.exe -log ptp_syn.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ptp_syn.tcl
+# Log file: F:/Project/PTP/ptp/ptp.runs/synth_1/ptp_syn.vds
+# Journal file: F:/Project/PTP/ptp/ptp.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ptp_syn.tcl -notrace
+Command: synth_design -top ptp_syn -part xc7z035fbv676-2
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+F:/Project/PTP/ptp/ptp.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
+
+INFO: [IP_Flow 19-2162] IP 'mult_gen_0' is locked:
+* Current project part 'xc7z035fbv676-2' and the part 'xcku035-fbva676-2-e' used to customize the IP 'mult_gen_0' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z035'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z035'
+INFO: [Device 21-403] Loading part xc7z035fbv676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18192
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 999.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ptp_syn' [F:/Project/PTP/ptp/ptp.srcs/ptp_syn.v:39]
+	Parameter SYNTH_DATECODE bound to: 32'b00000000000000000000000000000000 
+	Parameter FIRMWARE_ID bound to: -352321535 - type: integer 
+	Parameter VERSION bound to: 3 - type: integer 
+	Parameter STATE_PTP_IDLE bound to: 0 - type: integer 
+	Parameter STATE_PTP_SYN_PARSE bound to: 1 - type: integer 
+	Parameter STATE_PTP_FLUP_PARSE bound to: 2 - type: integer 
+	Parameter STATE_PTP_REQ_SEND bound to: 3 - type: integer 
+	Parameter STATE_PTP_RESP_PARSE bound to: 4 - type: integer 
+	Parameter STATE_PTP_CAL bound to: 5 - type: integer 
+	Parameter NANOS_PER_SEC bound to: 1000000000 - type: integer 
+	Parameter MAC_ADDR_SLAVE bound to: 48'b100011010001000100000010010111110011111101100100 
+	Parameter MAC_ADDR_MASTER bound to: 48'b100100000010000110001011010100110000111100000000 
+	Parameter CLK_FREQ bound to: 250000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ptp_sync_parse' [F:/Project/PTP/ptp/ptp.srcs/ptp_sync_parse.v:9]
+	Parameter CLK_FREQ bound to: 500000000 - type: integer 
+	Parameter NANOS_PER_SEC bound to: 1000000000 - type: integer 
+	Parameter ETHERTYPE_OFFSET bound to: 12 - type: integer 
+	Parameter ETHERTYPE_PTP bound to: 16'b1111011110001000 
+	Parameter PTP_MSG_TYPE_OFFSET bound to: 14 - type: integer 
+	Parameter PTP_MSG_TYPE_SYN bound to: 4'b0000 
+	Parameter PTP_CLOCKIDENTITY_OFFSET bound to: 34 - type: integer 
+	Parameter PTP_SEQUENCEID_OFFSET bound to: 44 - type: integer 
+	Parameter PTP_TIMESTAMP_OFFSET bound to: 48 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'field_extract' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 2 - type: integer 
+	Parameter OFFSET bound to: 12 - type: integer 
+	Parameter MAX_OFFSET bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract' (1#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6157] synthesizing module 'field_extract__parameterized0' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 1 - type: integer 
+	Parameter OFFSET bound to: 14 - type: integer 
+	Parameter MAX_OFFSET bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract__parameterized0' (1#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6157] synthesizing module 'field_extract__parameterized1' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 10 - type: integer 
+	Parameter OFFSET bound to: 34 - type: integer 
+	Parameter MAX_OFFSET bound to: 44 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract__parameterized1' (1#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6157] synthesizing module 'field_extract__parameterized2' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 2 - type: integer 
+	Parameter OFFSET bound to: 44 - type: integer 
+	Parameter MAX_OFFSET bound to: 46 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract__parameterized2' (1#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6157] synthesizing module 'field_extract__parameterized3' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 10 - type: integer 
+	Parameter OFFSET bound to: 48 - type: integer 
+	Parameter MAX_OFFSET bound to: 58 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract__parameterized3' (1#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ptp_sync_parse' (2#1) [F:/Project/PTP/ptp/ptp.srcs/ptp_sync_parse.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mult_gen_0' [F:/Project/PTP/ptp/ptp.runs/synth_1/.Xil/Vivado-86248-jude/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_gen_0' (3#1) [F:/Project/PTP/ptp/ptp.runs/synth_1/.Xil/Vivado-86248-jude/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ptp_flup_parse' [F:/Project/PTP/ptp/ptp.srcs/ptp_flup_parse.v:9]
+	Parameter ETHERTYPE_OFFSET bound to: 12 - type: integer 
+	Parameter ETHERTYPE_PTP bound to: 16'b1111011110001000 
+	Parameter PTP_MSG_TYPE_OFFSET bound to: 14 - type: integer 
+	Parameter PTP_MSG_TYPE_FLUP bound to: 4'b1000 
+	Parameter PTP_CLOCKIDENTITY_OFFSET bound to: 34 - type: integer 
+	Parameter PTP_SEQUENCEID_OFFSET bound to: 44 - type: integer 
+	Parameter PTP_TIMESTAMP_OFFSET bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ptp_flup_parse' (4#1) [F:/Project/PTP/ptp/ptp.srcs/ptp_flup_parse.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ptp_resp_parse' [F:/Project/PTP/ptp/ptp.srcs/ptp_resp_parse.v:9]
+	Parameter ETHERTYPE_OFFSET bound to: 12 - type: integer 
+	Parameter ETHERTYPE_PTP bound to: 16'b1111011110001000 
+	Parameter PTP_MSG_TYPE_OFFSET bound to: 14 - type: integer 
+	Parameter PTP_MSG_TYPE_RESP bound to: 4'b1001 
+	Parameter PTP_CLOCKIDENTITY_OFFSET bound to: 34 - type: integer 
+	Parameter PTP_SEQUENCEID_OFFSET bound to: 44 - type: integer 
+	Parameter PTP_TIMESTAMP_OFFSET bound to: 48 - type: integer 
+	Parameter PTP_INFO_EX_OFFSET bound to: 58 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'field_extract__parameterized4' [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+	Parameter BYTES bound to: 10 - type: integer 
+	Parameter OFFSET bound to: 58 - type: integer 
+	Parameter MAX_OFFSET bound to: 68 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'field_extract__parameterized4' (4#1) [F:/Project/PTP/ptp/ptp.srcs/field_extract.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ptp_resp_parse' (5#1) [F:/Project/PTP/ptp/ptp.srcs/ptp_resp_parse.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ptp_req_framegen' [F:/Project/PTP/ptp/ptp.srcs/ptp_req_framegen.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Project/PTP/ptp/ptp.srcs/ptp_req_framegen.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'ptp_req_framegen' (6#1) [F:/Project/PTP/ptp/ptp.srcs/ptp_req_framegen.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vabus_mux' [F:/Project/PTP/ptp/ptp.srcs/vabus_mux.v:6]
+	Parameter WIDTH bound to: 69 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vabus_mux' (7#1) [F:/Project/PTP/ptp/ptp.srcs/vabus_mux.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ptp_syn' (8#1) [F:/Project/PTP/ptp/ptp.srcs/ptp_syn.v:39]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 999.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 999.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 999.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 999.797 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/Project/PTP/ptp/ptp.gen/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'mult_gen_flup'
+Finished Parsing XDC File [f:/Project/PTP/ptp/ptp.gen/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'mult_gen_flup'
+Parsing XDC File [f:/Project/PTP/ptp/ptp.gen/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'mult_gen_resp'
+Finished Parsing XDC File [f:/Project/PTP/ptp/ptp.gen/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'mult_gen_resp'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1111.676 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1111.676 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z035fbv676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for mult_gen_flup. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mult_gen_resp. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ptp_syn'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          STATE_PTP_IDLE |                           000001 |                             0000
+     STATE_PTP_SYN_PARSE |                           000010 |                             0001
+    STATE_PTP_FLUP_PARSE |                           000100 |                             0010
+      STATE_PTP_REQ_SEND |                           001000 |                             0011
+    STATE_PTP_RESP_PARSE |                           010000 |                             0100
+           STATE_PTP_CAL |                           100000 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ptp_syn'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 3     
+	   5 Input   64 Bit       Adders := 1     
+	   3 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 16    
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	              164 Bit    Registers := 4     
+	               80 Bit    Registers := 7     
+	               64 Bit    Registers := 8     
+	               48 Bit    Registers := 4     
+	               32 Bit    Registers := 8     
+	               16 Bit    Registers := 12    
+	                8 Bit    Registers := 19    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 50    
++---Muxes : 
+	   2 Input  164 Bit        Muxes := 2     
+	   2 Input   80 Bit        Muxes := 2     
+	   2 Input   69 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 2     
+	   8 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 8     
+	   4 Input    5 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 14    
+	  10 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1000 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|ptp_syn     | receive_timestamp_valid_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|ptp_syn     | precise_timestamp_valid_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |mult_gen_0    |         2|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |mult_gen    |     1|
+|2     |mult_gen_0_ |     1|
+|3     |BUFG        |     1|
+|4     |CARRY4      |   120|
+|5     |LUT1        |     5|
+|6     |LUT2        |   153|
+|7     |LUT3        |   145|
+|8     |LUT4        |    91|
+|9     |LUT5        |   284|
+|10    |LUT6        |   229|
+|11    |SRL16E      |     2|
+|12    |FDCE        |   120|
+|13    |FDPE        |     1|
+|14    |FDRE        |  1384|
+|15    |IBUF        |   196|
+|16    |OBUF        |   222|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1111.676 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1111.676 ; gain = 111.879
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1123.469 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 120 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1123.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1123.754 ; gain = 123.957
+INFO: [Common 17-1381] The checkpoint 'F:/Project/PTP/ptp/ptp.runs/synth_1/ptp_syn.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ptp_syn_utilization_synth.rpt -pb ptp_syn_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 25 15:52:01 2025...
