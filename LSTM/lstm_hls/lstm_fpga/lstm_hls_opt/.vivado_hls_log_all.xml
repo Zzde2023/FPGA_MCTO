@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Bias_lc_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.605+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Bias_o_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.596+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Bias_c_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.582+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Bias_i_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.572+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Bias_f_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.545+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'Weight_lc_V' will not be exposed as RTL port." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:09:19.545+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'infer' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[10081] ('r_V_16', lstm_hls_opt/src/rnn.cpp:187) [10073]  (2.82 ns)&#xD;&#xA;&#x9;'add' operation of DSP[10081] ('ret_V_17', lstm_hls_opt/src/rnn.cpp:187) [10081]  (2.73 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_113', lstm_hls_opt/src/rnn.cpp:66->lstm_hls_opt/src/rnn.cpp:188) [10084]  (2.14 ns)&#xD;&#xA;&#x9;'select' operation ('tmp_229_cast', lstm_hls_opt/src/rnn.cpp:67->lstm_hls_opt/src/rnn.cpp:188) [10087]  (0 ns)&#xD;&#xA;&#x9;'select' operation ('p_Val2_s', lstm_hls_opt/src/rnn.cpp:67->lstm_hls_opt/src/rnn.cpp:188) [10089]  (0 ns)&#xD;&#xA;&#x9;'add' operation ('ret_V', lstm_hls_opt/src/rnn.cpp:189) [10091]  (1.55 ns)" projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:08:09.283+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.235ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:08:09.254+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Weight_lc_V_load_2', lstm_hls_opt/src/rnn.cpp:202) on array 'Weight_lc_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Weight_lc_V'." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:02:26.640+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to satisfy resource constraint for The memory core ROM_1P_LUTRAM has insufficient ports to support accesses to array 'Weight_lc_V' (II = 1).." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:02:26.590+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Weight_c_V_load_85', lstm_hls_opt/src/rnn.cpp:174) on array 'Weight_c_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Weight_c_V'." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T03:02:26.317+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('f_0_V_load_4', lstm_hls_opt/src/rnn.cpp:172) on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'f_0_V'." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:54:00.029+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'infer': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between 'store' operation (lstm_hls_opt/src/rnn.cpp:172) of variable 'tmp_116', lstm_hls_opt/src/rnn.cpp:172 on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99 and 'load' operation ('f_0_V_load', lstm_hls_opt/src/rnn.cpp:172) on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:46:32.059+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'mnist_lstm&lt;float, 1, 1, 1>' to 'mnist_lstm' (lstm_hls_opt/src/rnn_top.cpp:7:26)" projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:46:20.560+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (lstm_hls_opt/src/rnn.cpp:141:19) in function 'infer' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:57.786+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'vec_i.V' (lstm_hls_opt/src/rnn.cpp:103) accessed through non-constant indices on dimension 1 (lstm_hls_opt/src/rnn.cpp:169:19), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:29.543+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.5.1' (lstm_hls_opt/src/rnn.cpp:170) because its parent loop or function is pipelined." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:23.126+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (lstm_hls_opt/src/rnn_top.cpp:31)." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:23.111+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (lstm_hls_opt/src/rnn_top.cpp:31)." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:23.030+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] lstm_hls_opt/src/rnn.cpp:46: variable-indexed range selection may cause suboptimal QoR." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T02:45:22.538+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T07:34:41.233+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fpext_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T07:34:39.976+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fdiv_10_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T07:34:38.598+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T07:34:37.265+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_dcmp_0_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_opt" solutionName="solution1" date="2025-04-16T07:34:35.878+0800" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,793 @@
+
+
+================================================================
+== Vivado HLS Report for 'compute_bilstm'
+================================================================
+* Date:           Sat Apr 19 01:59:25 2025
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        bi_lstm
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.760|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+----------+
+    |    Latency   |   Interval   | Pipeline |
+    | min |   max  | min |   max  |   Type   |
+    +-----+--------+-----+--------+----------+
+    |   15|  114950|    9|  114944| dataflow |
+    +-----+--------+-----+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+        |                         |                      |    Latency   |   Interval   | Pipeline|
+        |         Instance        |        Module        | min |   max  | min |   max  |   Type  |
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+        |lstm_backward_U0         |lstm_backward         |    8|  110625|    8|  110625|   none  |
+        |lstm_forward_U0          |lstm_forward          |    8|  114943|    8|  114943|   none  |
+        |merge_output_U0          |merge_output          |    6|       6|    6|       6|   none  |
+        |compute_bilstm_entry_U0  |compute_bilstm_entry  |    0|       0|    0|       0|   none  |
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    220|
+|FIFO             |        0|      -|     510|   2838|
+|Instance         |      188|    450|   12852|  13908|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    318|
+|Register         |        -|      -|     109|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      188|    450|   13471|  17284|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       67|    204|      12|     32|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+------+------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-------------------------+----------------------+---------+-------+------+------+
+    |compute_bilstm_entry_U0  |compute_bilstm_entry  |        0|      0|     2|    13|
+    |lstm_backward_U0         |lstm_backward         |       95|    226|  6450|  7262|
+    |lstm_forward_U0          |lstm_forward          |       93|    224|  6392|  6497|
+    |merge_output_U0          |merge_output          |        0|      0|     8|   136|
+    +-------------------------+----------------------+---------+-------+------+------+
+    |Total                    |                      |      188|    450| 12852| 13908|
+    +-------------------------+----------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------+---------+---+----+------+-----+---------+
+    |        Name       | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +-------------------+---------+---+----+------+-----+---------+
+    |h_b_0_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_0_6_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_1_6_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_2_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_3_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_4_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_5_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_6_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_b_7_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_0_6_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_1_6_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_2_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_3_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_4_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_5_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_6_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_0_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_1_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_2_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_3_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_4_V_U        |        0|  5|  28|     2|   16|       32|
+    |h_f_7_5_V_U        |        0|  5|  28|     2|   16|       32|
+    |valid_len_c10_i_U  |        0|  5|  19|     2|    7|       14|
+    |valid_len_c_i_U    |        0|  5|  19|     2|    7|       14|
+    +-------------------+---------+---+----+------+-----+---------+
+    |Total              |        0|510|2838|   204| 1614|     3228|
+    +-------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |compute_bilstm_entry_U0_ap_ready_count    |     +    |      0|  0|   3|           2|           1|
+    |lstm_backward_U0_ap_ready_count           |     +    |      0|  0|   3|           2|           1|
+    |lstm_forward_U0_ap_ready_count            |     +    |      0|  0|   3|           2|           1|
+    |ap_channel_done_h_b_0_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_0_6_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_1_6_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_2_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_3_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_4_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_5_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_6_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_b_7_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_0_6_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_1_6_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_2_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_3_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_4_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_5_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_6_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_0_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_1_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_2_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_3_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_4_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_channel_done_h_f_7_5_V                 |    and   |      0|  0|   1|           1|           1|
+    |ap_idle                                   |    and   |      0|  0|   1|           1|           1|
+    |ap_sync_ready                             |    and   |      0|  0|   1|           1|           1|
+    |compute_bilstm_entry_U0_ap_start          |    and   |      0|  0|   1|           1|           1|
+    |lstm_backward_U0_ap_continue              |    and   |      0|  0|   1|           1|           1|
+    |lstm_backward_U0_ap_start                 |    and   |      0|  0|   1|           1|           1|
+    |lstm_forward_U0_ap_continue               |    and   |      0|  0|   1|           1|           1|
+    |lstm_forward_U0_ap_start                  |    and   |      0|  0|   1|           1|           1|
+    |merge_output_U0_ap_start                  |    and   |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_0_6_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_1_6_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_2_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_3_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_4_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_5_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_6_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_b_7_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_0_6_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_1_6_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_2_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_3_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_4_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_5_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_6_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_0_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_1_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_2_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_3_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_4_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_channel_write_h_f_7_5_V           |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_compute_bilstm_entry_U0_ap_ready  |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_lstm_backward_U0_ap_ready         |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_lstm_forward_U0_ap_ready          |    or    |      0|  0|   1|           1|           1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                     |          |      0|  0| 220|         217|         214|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_h_b_0_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_0_6_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_1_6_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_2_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_3_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_4_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_5_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_6_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_b_7_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_0_6_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_1_6_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_2_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_3_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_4_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_5_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_6_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_0_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_1_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_2_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_3_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_4_V           |   3|          2|    1|          2|
+    |ap_sync_reg_channel_write_h_f_7_5_V           |   3|          2|    1|          2|
+    |ap_sync_reg_compute_bilstm_entry_U0_ap_ready  |   3|          2|    1|          2|
+    |ap_sync_reg_lstm_backward_U0_ap_ready         |   3|          2|    1|          2|
+    |ap_sync_reg_lstm_forward_U0_ap_ready          |   3|          2|    1|          2|
+    |compute_bilstm_entry_U0_ap_ready_count        |   3|          2|    2|          4|
+    |lstm_backward_U0_ap_ready_count               |   3|          2|    2|          4|
+    |lstm_forward_U0_ap_ready_count                |   3|          2|    2|          4|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         | 318|        212|  109|        218|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_h_b_0_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_0_6_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_1_6_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_2_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_3_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_4_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_5_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_6_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_b_7_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_0_6_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_1_6_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_2_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_3_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_4_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_5_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_6_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_0_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_1_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_2_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_3_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_4_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_h_f_7_5_V           |  1|   0|    1|          0|
+    |ap_sync_reg_compute_bilstm_entry_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_lstm_backward_U0_ap_ready         |  1|   0|    1|          0|
+    |ap_sync_reg_lstm_forward_U0_ap_ready          |  1|   0|    1|          0|
+    |compute_bilstm_entry_U0_ap_ready_count        |  2|   0|    2|          0|
+    |lstm_backward_U0_ap_ready_count               |  2|   0|    2|          0|
+    |lstm_forward_U0_ap_ready_count                |  2|   0|    2|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |109|   0|  109|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++--------------------+-----+-----+------------+----------------+--------------+
+|input_f_V_address0  | out |   12|  ap_memory |    input_f_V   |     array    |
+|input_f_V_ce0       | out |    1|  ap_memory |    input_f_V   |     array    |
+|input_f_V_d0        | out |   16|  ap_memory |    input_f_V   |     array    |
+|input_f_V_q0        |  in |   16|  ap_memory |    input_f_V   |     array    |
+|input_f_V_we0       | out |    1|  ap_memory |    input_f_V   |     array    |
+|input_f_V_address1  | out |   12|  ap_memory |    input_f_V   |     array    |
+|input_f_V_ce1       | out |    1|  ap_memory |    input_f_V   |     array    |
+|input_f_V_d1        | out |   16|  ap_memory |    input_f_V   |     array    |
+|input_f_V_q1        |  in |   16|  ap_memory |    input_f_V   |     array    |
+|input_f_V_we1       | out |    1|  ap_memory |    input_f_V   |     array    |
+|input_b_V_address0  | out |   12|  ap_memory |    input_b_V   |     array    |
+|input_b_V_ce0       | out |    1|  ap_memory |    input_b_V   |     array    |
+|input_b_V_d0        | out |   16|  ap_memory |    input_b_V   |     array    |
+|input_b_V_q0        |  in |   16|  ap_memory |    input_b_V   |     array    |
+|input_b_V_we0       | out |    1|  ap_memory |    input_b_V   |     array    |
+|input_b_V_address1  | out |   12|  ap_memory |    input_b_V   |     array    |
+|input_b_V_ce1       | out |    1|  ap_memory |    input_b_V   |     array    |
+|input_b_V_d1        | out |   16|  ap_memory |    input_b_V   |     array    |
+|input_b_V_q1        |  in |   16|  ap_memory |    input_b_V   |     array    |
+|input_b_V_we1       | out |    1|  ap_memory |    input_b_V   |     array    |
+|valid_len_dout      |  in |    7|   ap_fifo  |    valid_len   |    pointer   |
+|valid_len_empty_n   |  in |    1|   ap_fifo  |    valid_len   |    pointer   |
+|valid_len_read      | out |    1|   ap_fifo  |    valid_len   |    pointer   |
+|h_out_0_V_address0  | out |    4|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_ce0       | out |    1|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_d0        | out |   16|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_q0        |  in |   16|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_we0       | out |    1|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_address1  | out |    4|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_ce1       | out |    1|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_d1        | out |   16|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_q1        |  in |   16|  ap_memory |    h_out_0_V   |     array    |
+|h_out_0_V_we1       | out |    1|  ap_memory |    h_out_0_V   |     array    |
+|h_out_1_V_address0  | out |    4|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_ce0       | out |    1|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_d0        | out |   16|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_q0        |  in |   16|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_we0       | out |    1|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_address1  | out |    4|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_ce1       | out |    1|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_d1        | out |   16|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_q1        |  in |   16|  ap_memory |    h_out_1_V   |     array    |
+|h_out_1_V_we1       | out |    1|  ap_memory |    h_out_1_V   |     array    |
+|h_out_2_V_address0  | out |    4|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_ce0       | out |    1|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_d0        | out |   16|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_q0        |  in |   16|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_we0       | out |    1|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_address1  | out |    4|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_ce1       | out |    1|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_d1        | out |   16|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_q1        |  in |   16|  ap_memory |    h_out_2_V   |     array    |
+|h_out_2_V_we1       | out |    1|  ap_memory |    h_out_2_V   |     array    |
+|h_out_3_V_address0  | out |    4|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_ce0       | out |    1|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_d0        | out |   16|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_q0        |  in |   16|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_we0       | out |    1|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_address1  | out |    4|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_ce1       | out |    1|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_d1        | out |   16|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_q1        |  in |   16|  ap_memory |    h_out_3_V   |     array    |
+|h_out_3_V_we1       | out |    1|  ap_memory |    h_out_3_V   |     array    |
+|h_out_4_V_address0  | out |    4|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_ce0       | out |    1|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_d0        | out |   16|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_q0        |  in |   16|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_we0       | out |    1|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_address1  | out |    4|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_ce1       | out |    1|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_d1        | out |   16|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_q1        |  in |   16|  ap_memory |    h_out_4_V   |     array    |
+|h_out_4_V_we1       | out |    1|  ap_memory |    h_out_4_V   |     array    |
+|h_out_5_V_address0  | out |    4|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_ce0       | out |    1|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_d0        | out |   16|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_q0        |  in |   16|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_we0       | out |    1|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_address1  | out |    4|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_ce1       | out |    1|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_d1        | out |   16|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_q1        |  in |   16|  ap_memory |    h_out_5_V   |     array    |
+|h_out_5_V_we1       | out |    1|  ap_memory |    h_out_5_V   |     array    |
+|h_out_6_V_address0  | out |    4|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_ce0       | out |    1|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_d0        | out |   16|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_q0        |  in |   16|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_we0       | out |    1|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_address1  | out |    4|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_ce1       | out |    1|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_d1        | out |   16|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_q1        |  in |   16|  ap_memory |    h_out_6_V   |     array    |
+|h_out_6_V_we1       | out |    1|  ap_memory |    h_out_6_V   |     array    |
+|h_out_7_V_address0  | out |    4|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_ce0       | out |    1|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_d0        | out |   16|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_q0        |  in |   16|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_we0       | out |    1|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_address1  | out |    4|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_ce1       | out |    1|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_d1        | out |   16|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_q1        |  in |   16|  ap_memory |    h_out_7_V   |     array    |
+|h_out_7_V_we1       | out |    1|  ap_memory |    h_out_7_V   |     array    |
+|ap_clk              |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|input_f_V_empty_n   |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|input_f_V_read      | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|input_b_V_empty_n   |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|input_b_V_read      | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_0_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_0_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_1_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_1_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_2_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_2_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_3_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_3_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_4_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_4_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_5_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_5_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_6_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_6_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_7_V_full_n    |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
+|h_out_7_V_write     | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_done             | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | compute_bilstm | return value |
+|ap_continue         |  in |    1| ap_ctrl_hs | compute_bilstm | return value |
++--------------------+-----+-----+------------+----------------+--------------+
+

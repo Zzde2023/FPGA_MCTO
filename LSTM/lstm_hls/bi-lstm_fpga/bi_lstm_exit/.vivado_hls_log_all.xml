@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Pre-synthesis failed.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source D:/Xilinx/Project/LSTM/lstm_hls/bi-lstm_fpga/bi_lstm_exit/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main D:/Xilinx/Project/LSTM/lstm_hls/bi-lstm_fpga/bi_lstm_exit/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:23.221+0800"/>
+        <logs message="ERROR: [XFORM 203-711] Function 'lstm_infer' failed dataflow checking: control flows are not allowed inside a dataflow region  (bi_lstm_exit/src/rnn.cpp:131:1)." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:22.845+0800"/>
+        <logs message="ERROR: [XFORM 203-722] Found unsupported dataflow constructs in function 'lstm_infer' (bi_lstm_exit/src/rnn.cpp:130): the loop (bi_lstm_exit/src/rnn.cpp:155:19) has multiple exit points." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:22.736+0800"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'x_h.V' (bi_lstm_exit/src/rnn.cpp:83) accessed through non-constant indices on dimension 1 (bi_lstm_exit/src/rnn.cpp:102:19), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:19.542+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'h_cat.V' (bi_lstm_exit/src/rnn.cpp:146) accessed through non-constant indices on dimension 1 (bi_lstm_exit/src/rnn.cpp:193:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:19.495+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-4.1' (bi_lstm_exit/src/rnn.cpp:103) because its parent loop or function is pipelined." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:18.117+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.9.1' (bi_lstm_exit/src/rnn.cpp:218) because its parent loop or function is pipelined." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:18.070+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.7.1' (bi_lstm_exit/src/rnn.cpp:204) because its parent loop or function is pipelined." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:18.054+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] bi_lstm_exit/src/rnn.cpp:59: variable-indexed range selection may cause suboptimal QoR." projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:17.162+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file bi_lstm_exit/src/rnn.cpp" projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:55:08.375+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: bi_lstm_exit/src/rnn.cpp:155:5" projectName="bi_lstm_exit" solutionName="solution1" date="2025-04-20T16:54:53.176+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

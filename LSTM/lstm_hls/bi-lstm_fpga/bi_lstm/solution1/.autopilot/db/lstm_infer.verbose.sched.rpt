@@ -1,0 +1,230 @@
+
+
+================================================================
+== Vivado HLS Report for 'lstm_infer'
+================================================================
+* Date:           Sat Apr 19 01:58:20 2025
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        bi_lstm
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.760|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+----------+
+    |    Latency   |   Interval   | Pipeline |
+    | min |   max  | min |   max  |   Type   |
+    +-----+--------+-----+--------+----------+
+    |  831|  120721|  706|  114944| dataflow |
+    +-----+--------+-----+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 9, States = { 1 2 3 4 5 6 7 8 9 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read_11 = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %p_read)"   --->   Operation 10 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%data_lens_load_reloa = alloca i7, align 1"   --->   Operation 11 'alloca' 'data_lens_load_reloa' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%input_f_V_i = alloca [3900 x i16], align 2"   --->   Operation 12 'alloca' 'input_f_V_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%input_b_V_i = alloca [3900 x i16], align 2"   --->   Operation 13 'alloca' 'input_b_V_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%h_t_cat_0_i = alloca [13 x i16], align 2"   --->   Operation 14 'alloca' 'h_t_cat_0_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%h_t_cat_1_i = alloca [13 x i16], align 2"   --->   Operation 15 'alloca' 'h_t_cat_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%h_t_cat_2_i = alloca [13 x i16], align 2"   --->   Operation 16 'alloca' 'h_t_cat_2_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%h_t_cat_3_i = alloca [13 x i16], align 2"   --->   Operation 17 'alloca' 'h_t_cat_3_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%h_t_cat_4_i = alloca [12 x i16], align 2"   --->   Operation 18 'alloca' 'h_t_cat_4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%h_t_cat_5_i = alloca [12 x i16], align 2"   --->   Operation 19 'alloca' 'h_t_cat_5_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%h_t_cat_6_i = alloca [12 x i16], align 2"   --->   Operation 20 'alloca' 'h_t_cat_6_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%h_t_cat_7_i = alloca [12 x i16], align 2"   --->   Operation 21 'alloca' 'h_t_cat_7_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%fc1_out_0_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 22 'alloca' 'fc1_out_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%fc1_out_1_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 23 'alloca' 'fc1_out_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%fc1_out_2_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 24 'alloca' 'fc1_out_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%fc1_out_3_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 25 'alloca' 'fc1_out_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%fc1_out_4_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 26 'alloca' 'fc1_out_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%fc1_out_5_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 27 'alloca' 'fc1_out_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%fc1_out_6_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 28 'alloca' 'fc1_out_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%fc1_out_7_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 29 'alloca' 'fc1_out_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%fc1_out_8_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 30 'alloca' 'fc1_out_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%fc1_out_9_V = alloca [5 x i16], align 2" [bi_lstm/src/rnn.cpp:315->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 31 'alloca' 'fc1_out_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (3.40ns)   --->   "call fastcc void @lstm_infer_Loop_1_pr(i7 %p_read_11, [3900 x i16]* %input_b_V_i, [3900 x i16]* %input_f_V_i, [3900 x float]* %input_r, i7* %data_lens_load_reloa)"   --->   Operation 32 'call' <Predicate = true> <Delay = 3.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 33 [1/2] (0.00ns)   --->   "call fastcc void @lstm_infer_Loop_1_pr(i7 %p_read_11, [3900 x i16]* %input_b_V_i, [3900 x i16]* %input_f_V_i, [3900 x float]* %input_r, i7* %data_lens_load_reloa)"   --->   Operation 33 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 34 [2/2] (0.00ns)   --->   "call fastcc void @compute_bilstm([3900 x i16]* %input_f_V_i, [3900 x i16]* %input_b_V_i, i7* nocapture %data_lens_load_reloa, [13 x i16]* %h_t_cat_0_i, [13 x i16]* %h_t_cat_1_i, [13 x i16]* %h_t_cat_2_i, [13 x i16]* %h_t_cat_3_i, [12 x i16]* %h_t_cat_4_i, [12 x i16]* %h_t_cat_5_i, [12 x i16]* %h_t_cat_6_i, [12 x i16]* %h_t_cat_7_i)" [bi_lstm/src/rnn.cpp:313->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 34 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 35 [1/2] (0.00ns)   --->   "call fastcc void @compute_bilstm([3900 x i16]* %input_f_V_i, [3900 x i16]* %input_b_V_i, i7* nocapture %data_lens_load_reloa, [13 x i16]* %h_t_cat_0_i, [13 x i16]* %h_t_cat_1_i, [13 x i16]* %h_t_cat_2_i, [13 x i16]* %h_t_cat_3_i, [12 x i16]* %h_t_cat_4_i, [12 x i16]* %h_t_cat_5_i, [12 x i16]* %h_t_cat_6_i, [12 x i16]* %h_t_cat_7_i)" [bi_lstm/src/rnn.cpp:313->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 35 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 36 [2/2] (0.00ns)   --->   "call fastcc void @lstm_infer_Block_arr([5 x i16]* %fc1_out_0_V, [5 x i16]* %fc1_out_1_V, [5 x i16]* %fc1_out_2_V, [5 x i16]* %fc1_out_3_V, [5 x i16]* %fc1_out_4_V, [5 x i16]* %fc1_out_5_V, [5 x i16]* %fc1_out_6_V, [5 x i16]* %fc1_out_7_V, [5 x i16]* %fc1_out_8_V, [5 x i16]* %fc1_out_9_V, [13 x i16]* %h_t_cat_0_i, [13 x i16]* %h_t_cat_1_i, [13 x i16]* %h_t_cat_2_i, [13 x i16]* %h_t_cat_3_i, [12 x i16]* %h_t_cat_4_i, [12 x i16]* %h_t_cat_5_i, [12 x i16]* %h_t_cat_6_i, [12 x i16]* %h_t_cat_7_i)"   --->   Operation 36 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 37 [1/2] (0.00ns)   --->   "call fastcc void @lstm_infer_Block_arr([5 x i16]* %fc1_out_0_V, [5 x i16]* %fc1_out_1_V, [5 x i16]* %fc1_out_2_V, [5 x i16]* %fc1_out_3_V, [5 x i16]* %fc1_out_4_V, [5 x i16]* %fc1_out_5_V, [5 x i16]* %fc1_out_6_V, [5 x i16]* %fc1_out_7_V, [5 x i16]* %fc1_out_8_V, [5 x i16]* %fc1_out_9_V, [13 x i16]* %h_t_cat_0_i, [13 x i16]* %h_t_cat_1_i, [13 x i16]* %h_t_cat_2_i, [13 x i16]* %h_t_cat_3_i, [12 x i16]* %h_t_cat_4_i, [12 x i16]* %h_t_cat_5_i, [12 x i16]* %h_t_cat_6_i, [12 x i16]* %h_t_cat_7_i)"   --->   Operation 37 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 38 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @lstm_infer_Loop_3_pr([5 x i16]* %fc1_out_0_V, [5 x i16]* %fc1_out_1_V, [5 x i16]* %fc1_out_2_V, [5 x i16]* %fc1_out_3_V, [5 x i16]* %fc1_out_4_V, [5 x i16]* %fc1_out_5_V, [5 x i16]* %fc1_out_6_V, [5 x i16]* %fc1_out_7_V, [5 x i16]* %fc1_out_8_V, [5 x i16]* %fc1_out_9_V)"   --->   Operation 38 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 6.86>
+ST_8 : Operation 39 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @lstm_infer_Loop_3_pr([5 x i16]* %fc1_out_0_V, [5 x i16]* %fc1_out_1_V, [5 x i16]* %fc1_out_2_V, [5 x i16]* %fc1_out_3_V, [5 x i16]* %fc1_out_4_V, [5 x i16]* %fc1_out_5_V, [5 x i16]* %fc1_out_6_V, [5 x i16]* %fc1_out_7_V, [5 x i16]* %fc1_out_8_V, [5 x i16]* %fc1_out_9_V)"   --->   Operation 39 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 40 [1/1] (0.00ns)   --->   "%fc2_out_V_9_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 0"   --->   Operation 40 'extractvalue' 'fc2_out_V_9_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 41 [1/1] (0.00ns)   --->   "%fc2_out_V_8_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 1"   --->   Operation 41 'extractvalue' 'fc2_out_V_8_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 42 [1/1] (0.00ns)   --->   "%fc2_out_V_7_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 2"   --->   Operation 42 'extractvalue' 'fc2_out_V_7_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "%fc2_out_V_6_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 3"   --->   Operation 43 'extractvalue' 'fc2_out_V_6_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 44 [1/1] (0.00ns)   --->   "%fc2_out_V_5_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 4"   --->   Operation 44 'extractvalue' 'fc2_out_V_5_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 45 [1/1] (0.00ns)   --->   "%fc2_out_V_4_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 5"   --->   Operation 45 'extractvalue' 'fc2_out_V_4_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "%fc2_out_V_3_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 6"   --->   Operation 46 'extractvalue' 'fc2_out_V_3_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 47 [1/1] (0.00ns)   --->   "%fc2_out_V_2_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 7"   --->   Operation 47 'extractvalue' 'fc2_out_V_2_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%fc2_out_V_1_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 8"   --->   Operation 48 'extractvalue' 'fc2_out_V_1_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 49 [1/1] (0.00ns)   --->   "%fc2_out_V_0_loc_i_ch = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 9"   --->   Operation 49 'extractvalue' 'fc2_out_V_0_loc_i_ch' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_8 : Operation 50 [2/2] (6.86ns)   --->   "call fastcc void @lstm_infer_Block_.pr(i16 %fc2_out_V_0_loc_i_ch, float* %ress_0, i16 %fc2_out_V_1_loc_i_ch, float* %ress_1, i16 %fc2_out_V_2_loc_i_ch, float* %ress_2, i16 %fc2_out_V_3_loc_i_ch, float* %ress_3, i16 %fc2_out_V_4_loc_i_ch, float* %ress_4, i16 %fc2_out_V_5_loc_i_ch, float* %ress_5, i16 %fc2_out_V_6_loc_i_ch, float* %ress_6, i16 %fc2_out_V_7_loc_i_ch, float* %ress_7, i16 %fc2_out_V_8_loc_i_ch, float* %ress_8, i16 %fc2_out_V_9_loc_i_ch, float* %ress_9)"   --->   Operation 50 'call' <Predicate = true> <Delay = 6.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 4.11>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 1, [1 x i8]* @p_str22) nounwind" [bi_lstm/src/rnn.cpp:312->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 51 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_i_f_V_0, [623 x i7]* @Weight_i_f_V_1, [623 x i7]* @Weight_i_f_V_2, [623 x i7]* @Weight_i_f_V_3, [623 x i7]* @Weight_i_f_V_4, [623 x i7]* @Weight_i_f_V_5, [623 x i7]* @Weight_i_f_V_6, [89 x i7]* @Weight_i_f_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:267->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 52 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_f_f_V_0, [623 x i7]* @Weight_f_f_V_1, [623 x i7]* @Weight_f_f_V_2, [623 x i7]* @Weight_f_f_V_3, [623 x i7]* @Weight_f_f_V_4, [623 x i7]* @Weight_f_f_V_5, [623 x i7]* @Weight_f_f_V_6, [89 x i7]* @Weight_f_f_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:268->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 53 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_g_f_V_0, [623 x i7]* @Weight_g_f_V_1, [623 x i7]* @Weight_g_f_V_2, [623 x i7]* @Weight_g_f_V_3, [623 x i7]* @Weight_g_f_V_4, [623 x i7]* @Weight_g_f_V_5, [623 x i7]* @Weight_g_f_V_6, [89 x i7]* @Weight_g_f_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:269->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 54 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_o_f_V_0, [623 x i7]* @Weight_o_f_V_1, [623 x i7]* @Weight_o_f_V_2, [623 x i7]* @Weight_o_f_V_3, [623 x i7]* @Weight_o_f_V_4, [623 x i7]* @Weight_o_f_V_5, [623 x i7]* @Weight_o_f_V_6, [89 x i7]* @Weight_o_f_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:270->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 55 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_i_b_V_0, [623 x i7]* @Weight_i_b_V_1, [623 x i7]* @Weight_i_b_V_2, [623 x i7]* @Weight_i_b_V_3, [623 x i7]* @Weight_i_b_V_4, [623 x i7]* @Weight_i_b_V_5, [623 x i7]* @Weight_i_b_V_6, [89 x i7]* @Weight_i_b_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:271->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 56 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_f_b_V_0, [623 x i7]* @Weight_f_b_V_1, [623 x i7]* @Weight_f_b_V_2, [623 x i7]* @Weight_f_b_V_3, [623 x i7]* @Weight_f_b_V_4, [623 x i7]* @Weight_f_b_V_5, [623 x i7]* @Weight_f_b_V_6, [89 x i7]* @Weight_f_b_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:272->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 57 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_g_b_V_0, [623 x i7]* @Weight_g_b_V_1, [623 x i7]* @Weight_g_b_V_2, [623 x i7]* @Weight_g_b_V_3, [623 x i7]* @Weight_g_b_V_4, [623 x i7]* @Weight_g_b_V_5, [623 x i7]* @Weight_g_b_V_6, [89 x i6]* @Weight_g_b_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:273->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 58 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([623 x i7]* @Weight_o_b_V_0, [623 x i7]* @Weight_o_b_V_1, [623 x i7]* @Weight_o_b_V_2, [623 x i7]* @Weight_o_b_V_3, [623 x i7]* @Weight_o_b_V_4, [623 x i7]* @Weight_o_b_V_5, [623 x i7]* @Weight_o_b_V_6, [89 x i7]* @Weight_o_b_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:274->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 59 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([700 x i7]* @Weight_fc1_V_0, [700 x i7]* @Weight_fc1_V_1, [700 x i7]* @Weight_fc1_V_2, [700 x i7]* @Weight_fc1_V_3, [700 x i7]* @Weight_fc1_V_4, [700 x i7]* @Weight_fc1_V_5, [700 x i7]* @Weight_fc1_V_6, [100 x i7]* @Weight_fc1_V_7, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:275->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 60 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_0, [100 x i7]* @Weight_fc2_V_1, [100 x i7]* @Weight_fc2_V_2, [100 x i7]* @Weight_fc2_V_3, [100 x i7]* @Weight_fc2_V_4, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:276->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 61 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([256 x i15]* @sigmoid_lut_V, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)" [bi_lstm/src/rnn.cpp:300->bi_lstm/src/rnn_top.cpp:44]   --->   Operation 62 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([24 x i8]* @data_lens_OC_load_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i7* %data_lens_load_reloa, i7* %data_lens_load_reloa)"   --->   Operation 63 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i7* %data_lens_load_reloa, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 64 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 65 [1/2] (4.11ns)   --->   "call fastcc void @lstm_infer_Block_.pr(i16 %fc2_out_V_0_loc_i_ch, float* %ress_0, i16 %fc2_out_V_1_loc_i_ch, float* %ress_1, i16 %fc2_out_V_2_loc_i_ch, float* %ress_2, i16 %fc2_out_V_3_loc_i_ch, float* %ress_3, i16 %fc2_out_V_4_loc_i_ch, float* %ress_4, i16 %fc2_out_V_5_loc_i_ch, float* %ress_5, i16 %fc2_out_V_6_loc_i_ch, float* %ress_6, i16 %fc2_out_V_7_loc_i_ch, float* %ress_7, i16 %fc2_out_V_8_loc_i_ch, float* %ress_8, i16 %fc2_out_V_9_loc_i_ch, float* %ress_9)"   --->   Operation 65 'call' <Predicate = true> <Delay = 4.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 66 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.4ns
+The critical path consists of the following:
+	wire read on port 'p_read' [94]  (0 ns)
+	'call' operation to 'lstm_infer_Loop_1_pr' [130]  (3.4 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 6.87ns
+The critical path consists of the following:
+	'call' operation ('call_ret') to 'lstm_infer_Loop_3_pr' [133]  (0 ns)
+	'call' operation to 'lstm_infer_Block_.pr' [144]  (6.87 ns)
+
+ <State 9>: 4.12ns
+The critical path consists of the following:
+	'call' operation to 'lstm_infer_Block_.pr' [144]  (4.12 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

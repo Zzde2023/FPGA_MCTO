@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vivado HLS Report for 'read_input'
+================================================================
+* Date:           Sat Apr 19 01:53:15 2025
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        bi_lstm
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.771|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  3902|  3902|  3902|  3902|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |             |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |- read_loop  |  3900|  3900|         1|          1|          1|  3900|    yes   |
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (exitcond_i)
+	2  / (!exitcond_i)
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.46>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %input_stream_V_data_V, i4* %input_stream_V_keep_V, i4* %input_stream_V_strb_V, i1* %input_stream_V_user_V, i1* %input_stream_V_last_V, i1* %input_stream_V_id_V, i1* %input_stream_V_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.46ns)   --->   "br label %0" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 5 'br' <Predicate = true> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%i_i = phi i12 [ 0, %entry ], [ %i, %1 ]"   --->   Operation 6 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (1.82ns)   --->   "%exitcond_i = icmp eq i12 %i_i, -196" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 7 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.82> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3900, i64 3900, i64 3900)"   --->   Operation 8 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (1.54ns)   --->   "%i = add i12 %i_i, 1" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 9 'add' 'i' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %read_input.exit, label %1" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 10 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str1) nounwind" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 11 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_67_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str1)" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 12 'specregionbegin' 'tmp_67_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [bi_lstm/src/rnn_top.cpp:11]   --->   Operation 13 'specpipeline' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty_47 = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %input_stream_V_data_V, i4* %input_stream_V_keep_V, i4* %input_stream_V_strb_V, i1* %input_stream_V_user_V, i1* %input_stream_V_last_V, i1* %input_stream_V_id_V, i1* %input_stream_V_dest_V)" [bi_lstm/src/rnn_top.cpp:12]   --->   Operation 14 'read' 'empty_47' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_47, 0" [bi_lstm/src/rnn_top.cpp:12]   --->   Operation 15 'extractvalue' 'tmp_data_V' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%ret = bitcast i32 %tmp_data_V to float" [bi_lstm/src/utils.h:25->bi_lstm/src/rnn_top.cpp:12]   --->   Operation 16 'bitcast' 'ret' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_1_i = zext i12 %i_i to i64" [bi_lstm/src/rnn_top.cpp:12]   --->   Operation 17 'zext' 'tmp_1_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%input_buf_addr = getelementptr [3900 x float]* %input_buf, i64 0, i64 %tmp_1_i" [bi_lstm/src/rnn_top.cpp:12]   --->   Operation 18 'getelementptr' 'input_buf_addr' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (2.77ns)   --->   "store float %ret, float* %input_buf_addr, align 4" [bi_lstm/src/rnn_top.cpp:12]   --->   Operation 19 'store' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3900> <RAM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty_48 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str1, i32 %tmp_67_i)" [bi_lstm/src/rnn_top.cpp:13]   --->   Operation 20 'specregionend' 'empty_48' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br label %0" [bi_lstm/src/rnn_top.cpp:10]   --->   Operation 21 'br' <Predicate = (!exitcond_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.67>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%seq_load = load i32* @seq, align 4" [bi_lstm/src/rnn_top.cpp:14]   --->   Operation 22 'load' 'seq_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (1.96ns)   --->   "%tmp_i = icmp eq i32 %seq_load, 300" [bi_lstm/src/rnn_top.cpp:14]   --->   Operation 23 'icmp' 'tmp_i' <Predicate = true> <Delay = 1.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.70ns)   --->   "%tmp_i_49 = select i1 %tmp_i, i32 0, i32 %seq_load" [bi_lstm/src/rnn_top.cpp:14]   --->   Operation 24 'select' 'tmp_i_49' <Predicate = true> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "store i32 %tmp_i_49, i32* @seq, align 4" [bi_lstm/src/rnn_top.cpp:14]   --->   Operation 25 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 26 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.466ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', bi_lstm/src/rnn_top.cpp:10) [13]  (0.466 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', bi_lstm/src/rnn_top.cpp:10) [13]  (0 ns)
+	'getelementptr' operation ('input_buf_addr', bi_lstm/src/rnn_top.cpp:12) [26]  (0 ns)
+	'store' operation (bi_lstm/src/rnn_top.cpp:12) of variable 'ret', bi_lstm/src/utils.h:25->bi_lstm/src/rnn_top.cpp:12 on array 'input_buf' [27]  (2.77 ns)
+
+ <State 3>: 2.67ns
+The critical path consists of the following:
+	'load' operation ('seq_load', bi_lstm/src/rnn_top.cpp:14) on static variable 'seq' [31]  (0 ns)
+	'icmp' operation ('tmp_i', bi_lstm/src/rnn_top.cpp:14) [32]  (1.97 ns)
+	'select' operation ('tmp_i_49', bi_lstm/src/rnn_top.cpp:14) [33]  (0.705 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

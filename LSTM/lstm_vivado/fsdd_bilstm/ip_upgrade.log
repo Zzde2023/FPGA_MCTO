@@ -1,0 +1,657 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 20 02:47:25 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114047708) to (Rev. 2114047726)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 20 02:29:19 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114047691) to (Rev. 2114047708)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 20 02:15:00 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114047678) to (Rev. 2114047691)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 20 01:58:55 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114047658) to (Rev. 2114047678)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 20 01:40:04 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114047528) to (Rev. 2114047658)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 19 23:32:00 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114046240) to (Rev. 2114047528)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_BiLSTM_Top_0_0'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 'input_stream_TDEST'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 19 02:03:45 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114046153) to (Rev. 2114046240)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 19 00:35:33 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114046127) to (Rev. 2114046153)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 19 00:08:51 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114046109) to (Rev. 2114046127)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Apr 18 23:51:07 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114046079) to (Rev. 2114046109)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Apr 18 23:20:53 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114045936) to (Rev. 2114046079)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Apr 18 21:06:34 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114045706) to (Rev. 2114045936)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Apr 18 17:09:01 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_BiLSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_BiLSTM_Top_0_0 (xilinx.com:hls:BiLSTM_Top:1.0) from (Rev. 2114045343) to (Rev. 2114045706)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Apr 16 07:36:57 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114041945) to (Rev. 2114042254)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Apr 16 02:26:33 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114041559) to (Rev. 2114041945)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 15 20:00:33 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114041462) to (Rev. 2114041559)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 15 18:24:05 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114041419) to (Rev. 2114041462)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 15 17:45:54 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114040366) to (Rev. 2114041419)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 15 00:06:56 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114040337) to (Rev. 2114040366)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Apr 14 23:39:27 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114040254) to (Rev. 2114040337)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Apr 14 22:16:10 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114040204) to (Rev. 2114040254)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Apr 14 21:28:19 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114038722) to (Rev. 2114040204)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 13 20:59:51 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114004223) to (Rev. 2114038722)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar 20 21:44:36 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114003850) to (Rev. 2114004223)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar 20 15:31:27 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114003548) to (Rev. 2114003850)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar 20 10:29:46 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114002940) to (Rev. 2114003548)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar 20 00:22:38 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114002286) to (Rev. 2114002940)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Mar 19 13:28:22 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2114001149) to (Rev. 2114002286)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Mar 18 18:31:27 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2113999880) to (Rev. 2114001149)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Mar 17 21:23:55 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2113998451) to (Rev. 2113999880)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Mar 16 21:34:38 2025
+| Host         : jude running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_LSTM_Top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_LSTM_Top_0_0 (xilinx.com:hls:LSTM_Top:1.0) from (Rev. 2113988163) to (Rev. 2113998451)
+

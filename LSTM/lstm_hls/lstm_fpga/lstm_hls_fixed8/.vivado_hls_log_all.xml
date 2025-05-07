@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'infer_Weight_o_V' is read-only, switch it to a ROM." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:37:32.238+0800" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'infer_Weight_c_V' is read-only, switch it to a ROM." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:37:31.737+0800" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'infer_Weight_i_V' is read-only, switch it to a ROM." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:37:31.252+0800" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'infer_Weight_f_V' is read-only, switch it to a ROM." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:37:30.752+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('in_V_load_14', lstm_hls_fixed8/src/rnn.cpp:29) on array 'in_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'in_V'." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:58.282+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_V_load_38', lstm_hls_fixed8/src/rnn.cpp:54) on array 'a_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a_V'." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:52.793+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'tanh.1' to 'tanh_1'." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:50.980+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'mnist_lstm&lt;float, 1, 1, 1>' to 'mnist_lstm' (lstm_hls_fixed8/src/rnn_top.cpp:7:26)" projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:50.870+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1' (lstm_hls_fixed8/src/rnn.cpp:52) because its parent loop or function is pipelined." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:26.861+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1' (lstm_hls_fixed8/src/rnn.cpp:27) because its parent loop or function is pipelined." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:26.814+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (lstm_hls_fixed8/src/rnn_top.cpp:31)." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:26.782+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (lstm_hls_fixed8/src/rnn_top.cpp:31)." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:26.673+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] lstm_hls_fixed8/src/rnn.cpp:83: variable-indexed range selection may cause suboptimal QoR." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:36:25.766+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:38:56.540+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fpext_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:38:55.352+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fexp_6_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:38:54.037+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fdiv_10_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:38:52.630+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'LSTM_Top_ap_fadd_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lstm_hls_fixed8" solutionName="solution1" date="2025-04-27T23:38:51.358+0800" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

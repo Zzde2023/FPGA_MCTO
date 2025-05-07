@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="rnn.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\rnn.cpp"/>
+    <originFiles name="rnn.h" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\rnn.h"/>
+    <originFiles name="rnn_top.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\rnn_top.cpp"/>
+    <originFiles name="utils.h" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\utils.h"/>
+    <originFiles name="weight.h" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\weight.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\lstm_fpga\lstm_hls_opt\src\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

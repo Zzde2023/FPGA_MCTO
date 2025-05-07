@@ -1,0 +1,1281 @@
+INFO-FLOW: Workspace D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1 opened at Wed Apr 16 02:43:58 +0800 2025
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-2 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-2'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.175 sec.
+Execute   set_part xc7z020clg400-2 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-2 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'lstm_hls_opt/src/rnn.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling lstm_hls_opt/src/rnn.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted lstm_hls_opt/src/rnn.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "lstm_hls_opt/src/rnn.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E lstm_hls_opt/src/rnn.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp
+Command       clang done; 0.872 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 3.729 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp"  -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/useless.bc
+Command       clang done; 3.946 sec.
+INFO-FLOW: Done: GCC PP time: 8.6 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp std=gnu++98 -directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 3.661 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp std=gnu++98 -directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 3.545 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn.pp.0.cpp.diag.yml D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn.pp.0.cpp.err.log 
+Command       ap_eval done; 3.633 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn.pp.0.cpp.err.log 
+Command         ap_eval done; 4.547 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-legacy-rewriter.rnn.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-legacy-rewriter.rnn.pp.0.cpp.err.log 
+Command         ap_eval done; 3.638 sec.
+Command       tidy_31 done; 8.206 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 15.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 5.141 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.bc
+Command       clang done; 4.325 sec.
+INFO: [HLS 200-10] Analyzing design file 'lstm_hls_opt/src/rnn_top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling lstm_hls_opt/src/rnn_top.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted lstm_hls_opt/src/rnn_top.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "lstm_hls_opt/src/rnn_top.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E lstm_hls_opt/src/rnn_top.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp
+Command       clang done; 0.584 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.448 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp"  -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.857 sec.
+INFO-FLOW: Done: GCC PP time: 2.9 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp std=gnu++98 -directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.37 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp std=gnu++98 -directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.367 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn_top.pp.0.cpp.diag.yml D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn_top.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-dataflow-lawyer.rnn_top.pp.0.cpp.err.log 
+Command       ap_eval done; 0.35 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn_top.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn_top.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tidy-3.1.rnn_top.pp.0.cpp.err.log 
+Command         ap_eval done; 0.785 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-legacy-rewriter.rnn_top.pp.0.cpp.out.log 2> D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/xilinx-legacy-rewriter.rnn_top.pp.0.cpp.err.log 
+Command         ap_eval done; 0.417 sec.
+Command       tidy_31 done; 1.213 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 1.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.809 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.bc
+Command       clang done; 1.913 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn.g.bc D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/rnn_top.g.bc -hls-opt -except-internalize LSTM_Top -LD:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.417 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:48 . Memory (MB): peak = 103.914 ; gain = 19.109
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:48 . Memory (MB): peak = 103.914 ; gain = 19.109
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.pp.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.345 sec.
+Execute         llvm-ld D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.063 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top LSTM_Top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.0.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'pop_stream<float, 1, 1, 1>' into 'mnist_lstm<float, 1, 1, 1>' (lstm_hls_opt/src/rnn_top.cpp:13).
+INFO: [XFORM 203-603] Inlining function 'clamp_fixed' into 'infer' (lstm_hls_opt/src/rnn.cpp:188).
+INFO: [XFORM 203-603] Inlining function 'argmaxPred' into 'infer' (lstm_hls_opt/src/rnn.cpp:209).
+INFO: [XFORM 203-603] Inlining function 'push_stream<float, 1, 1, 1>' into 'mnist_lstm<float, 1, 1, 1>' (lstm_hls_opt/src/rnn_top.cpp:24).
+Command         transform done; 34.603 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:01:24 . Memory (MB): peak = 513.793 ; gain = 428.988
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.1.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.529 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] lstm_hls_opt/src/rnn.cpp:46: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command         transform done; 0.194 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:14 ; elapsed = 00:01:24 . Memory (MB): peak = 513.793 ; gain = 428.988
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.g.1.bc to D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.1.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (lstm_hls_opt/src/rnn_top.cpp:31).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (lstm_hls_opt/src/rnn_top.cpp:31).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.5' (lstm_hls_opt/src/rnn.cpp:167) in function 'infer' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.5.1' (lstm_hls_opt/src/rnn.cpp:170) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.8' (lstm_hls_opt/src/rnn.cpp:198) in function 'infer' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (lstm_hls_opt/src/rnn.cpp:134) in function 'infer' completely with a factor of 128.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (lstm_hls_opt/src/rnn.cpp:142) in function 'infer' completely with a factor of 28.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2' (lstm_hls_opt/src/rnn.cpp:146) in function 'infer' completely with a factor of 128.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (lstm_hls_opt/src/rnn.cpp:154) in function 'infer' completely with a factor of 156.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.4' (lstm_hls_opt/src/rnn.cpp:160) in function 'infer' completely with a factor of 128.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.5.1' (lstm_hls_opt/src/rnn.cpp:170) in function 'infer' completely with a factor of 128.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.6' (lstm_hls_opt/src/rnn.cpp:185) in function 'infer' partially with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.7' (lstm_hls_opt/src/rnn.cpp:194) in function 'infer' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.8.1' (lstm_hls_opt/src/rnn.cpp:200) in function 'infer' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.9' (lstm_hls_opt/src/rnn.cpp:205) in function 'infer' completely with a factor of 10.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (lstm_hls_opt/src/rnn.cpp:73) in function 'sigmoid' partially with a factor of 32.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (lstm_hls_opt/src/rnn.cpp:86) in function 'tanh' partially with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'fc_out.V' (lstm_hls_opt/src/rnn.cpp:104) in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'vec_i.V' (lstm_hls_opt/src/rnn.cpp:103) accessed through non-constant indices on dimension 1 (lstm_hls_opt/src/rnn.cpp:169:19), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'vec_i.V' (lstm_hls_opt/src/rnn.cpp:103) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'f.V' (lstm_hls_opt/src/rnn.cpp:99) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'i_.V' (lstm_hls_opt/src/rnn.cpp:98) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'g.V' (lstm_hls_opt/src/rnn.cpp:100) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'o.V' (lstm_hls_opt/src/rnn.cpp:101) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'h_t.V' (lstm_hls_opt/src/rnn.cpp:102) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'C_t.V' (lstm_hls_opt/src/rnn.cpp:102) in dimension 1 with a cyclic factor 8.
+Command         transform done; 16.294 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:88:6) to (lstm_hls_opt/src/rnn.cpp:86:23) in function 'tanh'... converting 161 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:75:6) to (lstm_hls_opt/src/rnn.cpp:73:23) in function 'sigmoid'... converting 161 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:46:24) to (lstm_hls_opt/src/rnn.cpp:48:5) in function 'should_skip'... converting 19 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:187:11) to (lstm_hls_opt/src/rnn.cpp:185:28) in function 'infer'... converting 129 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:211:39) to (lstm_hls_opt/src/rnn.cpp:211:33) in function 'infer'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:144:2) to (lstm_hls_opt/src/rnn.cpp:151:9) in function 'infer'... converting 253 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lstm_hls_opt/src/rnn.cpp:207:15) to (lstm_hls_opt/src/rnn.cpp:55:16) in function 'infer'... converting 91 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'should_skip' (lstm_hls_opt/src/rnn.cpp:31)...3 expression(s) balanced.
+Command         transform done; 12.775 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:01:53 . Memory (MB): peak = 513.793 ; gain = 428.988
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.2.bc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (lstm_hls_opt/src/rnn.cpp:141:19) in function 'infer' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function 'mnist_lstm<float, 1, 1, 1>' to 'mnist_lstm' (lstm_hls_opt/src/rnn_top.cpp:7:26)
+Command         transform done; 28.899 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:02:22 . Memory (MB): peak = 664.969 ; gain = 580.164
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 94.729 sec.
+Command     elaborate done; 141.618 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'LSTM_Top' ...
+Execute       ap_set_top_model LSTM_Top 
+Execute       get_model_list LSTM_Top -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model LSTM_Top 
+Execute       preproc_iomode -model mnist_lstm 
+Execute       preproc_iomode -model infer 
+Execute       preproc_iomode -model tanh 
+Execute       preproc_iomode -model sigmoid 
+Execute       preproc_iomode -model should_skip 
+Execute       get_model_list LSTM_Top -filter all-wo-channel 
+INFO-FLOW: Model list for configure: should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO-FLOW: Configuring Module : should_skip ...
+Execute       set_default_model should_skip 
+Execute       apply_spec_resource_limit should_skip 
+INFO-FLOW: Configuring Module : sigmoid ...
+Execute       set_default_model sigmoid 
+Execute       apply_spec_resource_limit sigmoid 
+INFO-FLOW: Configuring Module : tanh ...
+Execute       set_default_model tanh 
+Execute       apply_spec_resource_limit tanh 
+INFO-FLOW: Configuring Module : infer ...
+Execute       set_default_model infer 
+Execute       apply_spec_resource_limit infer 
+INFO-FLOW: Configuring Module : mnist_lstm ...
+Execute       set_default_model mnist_lstm 
+Execute       apply_spec_resource_limit mnist_lstm 
+INFO-FLOW: Configuring Module : LSTM_Top ...
+Execute       set_default_model LSTM_Top 
+Execute       apply_spec_resource_limit LSTM_Top 
+INFO-FLOW: Model list for preprocess: should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO-FLOW: Preprocessing Module: should_skip ...
+Execute       set_default_model should_skip 
+Execute       cdfg_preprocess -model should_skip 
+Execute       rtl_gen_preprocess should_skip 
+INFO-FLOW: Preprocessing Module: sigmoid ...
+Execute       set_default_model sigmoid 
+Execute       cdfg_preprocess -model sigmoid 
+Execute       rtl_gen_preprocess sigmoid 
+INFO-FLOW: Preprocessing Module: tanh ...
+Execute       set_default_model tanh 
+Execute       cdfg_preprocess -model tanh 
+Execute       rtl_gen_preprocess tanh 
+INFO-FLOW: Preprocessing Module: infer ...
+Execute       set_default_model infer 
+Execute       cdfg_preprocess -model infer 
+Command       cdfg_preprocess done; 1.169 sec.
+Execute       rtl_gen_preprocess infer 
+INFO-FLOW: Preprocessing Module: mnist_lstm ...
+Execute       set_default_model mnist_lstm 
+Execute       cdfg_preprocess -model mnist_lstm 
+Execute       rtl_gen_preprocess mnist_lstm 
+INFO-FLOW: Preprocessing Module: LSTM_Top ...
+Execute       set_default_model LSTM_Top 
+Execute       cdfg_preprocess -model LSTM_Top 
+Execute       rtl_gen_preprocess LSTM_Top 
+INFO-FLOW: Model list for synthesis: should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'should_skip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model should_skip 
+Execute       schedule -model should_skip 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 143.706 seconds; current allocated memory: 571.050 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.sched.adb -f 
+INFO-FLOW: Finish scheduling should_skip.
+Execute       set_default_model should_skip 
+Execute       bind -model should_skip 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=should_skip
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.279 seconds; current allocated memory: 571.942 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.verbose.bind.rpt -verbose -f 
+Command       report done; 0.109 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.bind.adb -f 
+INFO-FLOW: Finish binding should_skip.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sigmoid' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sigmoid 
+Execute       schedule -model sigmoid 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.216 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 574.157 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+Command       report done; 0.38 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.sched.adb -f 
+Command       db_write done; 0.319 sec.
+INFO-FLOW: Finish scheduling sigmoid.
+Execute       set_default_model sigmoid 
+Execute       bind -model sigmoid 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sigmoid
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.117 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 577.005 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.verbose.bind.rpt -verbose -f 
+Command       report done; 0.514 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.bind.adb -f 
+Command       db_write done; 0.336 sec.
+INFO-FLOW: Finish binding sigmoid.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tanh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model tanh 
+Execute       schedule -model tanh 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.218 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.175 seconds; current allocated memory: 579.543 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.verbose.sched.rpt -verbose -f 
+Command       report done; 0.394 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.sched.adb -f 
+Command       db_write done; 0.318 sec.
+INFO-FLOW: Finish scheduling tanh.
+Execute       set_default_model tanh 
+Execute       bind -model tanh 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=tanh
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.135 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.945 seconds; current allocated memory: 582.409 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.verbose.bind.rpt -verbose -f 
+Command       report done; 0.562 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.bind.adb -f 
+Command       db_write done; 0.336 sec.
+INFO-FLOW: Finish binding tanh.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model infer 
+Execute       schedule -model infer 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'infer': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (lstm_hls_opt/src/rnn.cpp:172) of variable 'tmp_116', lstm_hls_opt/src/rnn.cpp:172 on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99 and 'load' operation ('f_0_V_load', lstm_hls_opt/src/rnn.cpp:172) on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('f_0_V_load_4', lstm_hls_opt/src/rnn.cpp:172) on array 'f[0].V', lstm_hls_opt/src/rnn.cpp:99 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'f_0_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Weight_c_V_load_85', lstm_hls_opt/src/rnn.cpp:174) on array 'Weight_c_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Weight_c_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 28, Depth = 28.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.3'.
+WARNING: [SCHED 204-69] Unable to satisfy resource constraint for The memory core ROM_1P_LUTRAM has insufficient ports to support accesses to array 'Weight_lc_V' (II = 1)..
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Weight_lc_V_load_2', lstm_hls_opt/src/rnn.cpp:202) on array 'Weight_lc_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Weight_lc_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 12.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (9.235ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'infer' consists of the following:
+	'mul' operation of DSP[10081] ('r_V_16', lstm_hls_opt/src/rnn.cpp:187) [10073]  (2.82 ns)
+	'add' operation of DSP[10081] ('ret_V_17', lstm_hls_opt/src/rnn.cpp:187) [10081]  (2.73 ns)
+	'icmp' operation ('tmp_113', lstm_hls_opt/src/rnn.cpp:66->lstm_hls_opt/src/rnn.cpp:188) [10084]  (2.14 ns)
+	'select' operation ('tmp_229_cast', lstm_hls_opt/src/rnn.cpp:67->lstm_hls_opt/src/rnn.cpp:188) [10087]  (0 ns)
+	'select' operation ('p_Val2_s', lstm_hls_opt/src/rnn.cpp:67->lstm_hls_opt/src/rnn.cpp:188) [10089]  (0 ns)
+	'add' operation ('ret_V', lstm_hls_opt/src/rnn.cpp:189) [10091]  (1.55 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1303.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 1304.17 seconds; current allocated memory: 610.402 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.verbose.sched.rpt -verbose -f 
+Command       report done; 6.456 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.sched.adb -f 
+Command       db_write done; 4.325 sec.
+INFO-FLOW: Finish scheduling infer.
+Execute       set_default_model infer 
+Execute       bind -model infer 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=infer
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 7.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 17.952 seconds; current allocated memory: 651.905 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.verbose.bind.rpt -verbose -f 
+Command       report done; 7.277 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.bind.adb -f 
+Command       db_write done; 4.578 sec.
+INFO-FLOW: Finish binding infer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mnist_lstm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model mnist_lstm 
+Execute       schedule -model mnist_lstm 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.074 seconds; current allocated memory: 655.754 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.sched.adb -f 
+INFO-FLOW: Finish scheduling mnist_lstm.
+Execute       set_default_model mnist_lstm 
+Execute       bind -model mnist_lstm 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=mnist_lstm
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.584 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.764 seconds; current allocated memory: 657.120 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.verbose.bind.rpt -verbose -f 
+Command       report done; 1.667 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.bind.adb -f 
+INFO-FLOW: Finish binding mnist_lstm.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LSTM_Top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model LSTM_Top 
+Execute       schedule -model LSTM_Top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.86 seconds; current allocated memory: 660.524 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.sched.adb -f 
+INFO-FLOW: Finish scheduling LSTM_Top.
+Execute       set_default_model LSTM_Top 
+Execute       bind -model LSTM_Top 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=LSTM_Top
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.588 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.738 seconds; current allocated memory: 661.721 MB.
+Execute       report -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.verbose.bind.rpt -verbose -f 
+Command       report done; 1.645 sec.
+Execute       db_write -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.bind.adb -f 
+INFO-FLOW: Finish binding LSTM_Top.
+Execute       get_model_list LSTM_Top -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess should_skip 
+Execute       rtl_gen_preprocess sigmoid 
+Execute       rtl_gen_preprocess tanh 
+Execute       rtl_gen_preprocess infer 
+Execute       rtl_gen_preprocess mnist_lstm 
+Execute       rtl_gen_preprocess LSTM_Top 
+INFO-FLOW: Model list for RTL generation: should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'should_skip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model should_skip -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_dcmp_64ns_64ns_1_1_1' to 'LSTM_Top_dcmp_64nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_dcmp_64nbkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'should_skip'.
+INFO: [HLS 200-111]  Elapsed time: 1.847 seconds; current allocated memory: 666.192 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl should_skip -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/should_skip -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Execute       gen_rtl should_skip -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/should_skip 
+Execute       gen_rtl should_skip -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/should_skip 
+Execute       gen_tb_info should_skip -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Execute       report -model should_skip -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/should_skip_csynth.rpt -f 
+Execute       report -model should_skip -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/should_skip_csynth.xml -f -x 
+Execute       report -model should_skip -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.verbose.rpt -verbose -f 
+Command       report done; 0.118 sec.
+Execute       db_write -model should_skip -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.adb -f 
+Command       db_write done; 0.104 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sigmoid -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sigmoid_Sigmoid_lut_V' to 'sigmoid_Sigmoid_lcud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid'.
+Command       create_rtl_model done; 0.113 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.637 seconds; current allocated memory: 671.461 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sigmoid -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/sigmoid -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Execute       gen_rtl sigmoid -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/sigmoid 
+Execute       gen_rtl sigmoid -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/sigmoid 
+Execute       gen_tb_info sigmoid -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Execute       report -model sigmoid -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/sigmoid_csynth.rpt -f 
+Execute       report -model sigmoid -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/sigmoid_csynth.xml -f -x 
+Execute       report -model sigmoid -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.verbose.rpt -verbose -f 
+Command       report done; 0.591 sec.
+Execute       db_write -model sigmoid -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.adb -f 
+Command       db_write done; 0.506 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tanh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model tanh -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tanh'.
+Command       create_rtl_model done; 0.103 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.055 seconds; current allocated memory: 678.335 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl tanh -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/tanh -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Execute       gen_rtl tanh -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/tanh 
+Execute       gen_rtl tanh -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/tanh 
+Execute       gen_tb_info tanh -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Execute       report -model tanh -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/tanh_csynth.rpt -f 
+Execute       report -model tanh -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/tanh_csynth.xml -f -x 
+Execute       report -model tanh -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.verbose.rpt -verbose -f 
+Command       report done; 0.643 sec.
+Execute       db_write -model tanh -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.adb -f 
+Command       db_write done; 0.555 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model infer -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_fsub_32ns_32ns_32_4_full_dsp_1' to 'LSTM_Top_fsub_32ndEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_fpext_32ns_64_1_1' to 'LSTM_Top_fpext_32eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_fcmp_32ns_32ns_1_1_1' to 'LSTM_Top_fcmp_32nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mux_1568_16_1_1' to 'LSTM_Top_mux_1568g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mux_832_16_1_1' to 'LSTM_Top_mux_832_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mac_muladd_8s_16s_23ns_23_1_1' to 'LSTM_Top_mac_mulaibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mul_mul_16s_16s_27_1_1' to 'LSTM_Top_mul_mul_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mac_muladd_16s_16s_27s_27_1_1' to 'LSTM_Top_mac_mulakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_mul_mul_16s_16s_31_1_1' to 'LSTM_Top_mul_mul_lbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'infer' is 8517 from HDL expression: (1'b1 == ap_CS_fsm_state129)
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_fcmp_32nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_fpext_32eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_fsub_32ndEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mac_mulaibs': 522 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mac_mulakbM': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mul_mul_jbC': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mul_mul_lbW': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mux_1568g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_mux_832_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'infer'.
+Command       create_rtl_model done; 2.978 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.056 seconds; current allocated memory: 737.395 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl infer -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/infer -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Command       gen_rtl done; 0.111 sec.
+Execute       gen_rtl infer -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/infer 
+Execute       gen_rtl infer -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/infer 
+Execute       gen_tb_info infer -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.359 sec.
+Execute       report -model infer -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/infer_csynth.rpt -f 
+Command       report done; 0.439 sec.
+Execute       report -model infer -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/infer_csynth.xml -f -x 
+Command       report done; 0.361 sec.
+Execute       report -model infer -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.verbose.rpt -verbose -f 
+Command       report done; 8.184 sec.
+Execute       db_write -model infer -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.adb -f 
+Command       db_write done; 8.531 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mnist_lstm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model mnist_lstm -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'LSTM_Top_fdiv_32ns_32ns_32_12_1' to 'LSTM_Top_fdiv_32nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'LSTM_Top_fdiv_32nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mnist_lstm'.
+INFO: [HLS 200-111]  Elapsed time: 24.263 seconds; current allocated memory: 755.206 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl mnist_lstm -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/mnist_lstm -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Execute       gen_rtl mnist_lstm -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/mnist_lstm 
+Execute       gen_rtl mnist_lstm -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/mnist_lstm 
+Execute       gen_tb_info mnist_lstm -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Execute       report -model mnist_lstm -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/mnist_lstm_csynth.rpt -f 
+Execute       report -model mnist_lstm -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/mnist_lstm_csynth.xml -f -x 
+Execute       report -model mnist_lstm -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.verbose.rpt -verbose -f 
+Command       report done; 1.657 sec.
+Execute       db_write -model mnist_lstm -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.adb -f 
+Command       db_write done; 0.423 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LSTM_Top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model LSTM_Top -vendor xilinx -mg_file D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/in_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'LSTM_Top/out_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'LSTM_Top' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Global array 'Weight_lc_V' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'Bias_f_V' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'Bias_i_V' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'Bias_c_V' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'Bias_o_V' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'Bias_lc_V' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LSTM_Top'.
+Command       create_rtl_model done; 0.198 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.517 seconds; current allocated memory: 759.258 MB.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl LSTM_Top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/systemc/LSTM_Top -synmodules should_skip sigmoid tanh infer mnist_lstm LSTM_Top 
+Execute       gen_rtl LSTM_Top -istop -style xilinx -f -lang vhdl -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/vhdl/LSTM_Top 
+Execute       gen_rtl LSTM_Top -istop -style xilinx -f -lang vlog -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/verilog/LSTM_Top 
+Execute       export_constraint_db -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl -f -tool general 
+Execute       report -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.design.xml -verbose -f -dv 
+Command       report done; 1.074 sec.
+Execute       report -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top -p D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db 
+Execute       report -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/LSTM_Top_csynth.rpt -f 
+Execute       report -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/syn/report/LSTM_Top_csynth.xml -f -x 
+Execute       report -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.verbose.rpt -verbose -f 
+Command       report done; 1.675 sec.
+Execute       db_write -model LSTM_Top -o D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.adb -f 
+Command       db_write done; 0.464 sec.
+Execute       sc_get_clocks LSTM_Top 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain LSTM_Top 
+INFO-FLOW: Model list for RTL component generation: should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO-FLOW: Handling components in module [should_skip] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+INFO-FLOW: Found component LSTM_Top_dcmp_64nbkb.
+INFO-FLOW: Append model LSTM_Top_dcmp_64nbkb
+INFO-FLOW: Handling components in module [sigmoid] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+INFO-FLOW: Found component sigmoid_Sigmoid_lcud.
+INFO-FLOW: Append model sigmoid_Sigmoid_lcud
+INFO-FLOW: Handling components in module [tanh] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+INFO-FLOW: Found component tanh_Tanh_lut_V.
+INFO-FLOW: Append model tanh_Tanh_lut_V
+INFO-FLOW: Handling components in module [infer] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+INFO-FLOW: Found component LSTM_Top_fsub_32ndEe.
+INFO-FLOW: Append model LSTM_Top_fsub_32ndEe
+INFO-FLOW: Found component LSTM_Top_fpext_32eOg.
+INFO-FLOW: Append model LSTM_Top_fpext_32eOg
+INFO-FLOW: Found component LSTM_Top_fcmp_32nfYi.
+INFO-FLOW: Append model LSTM_Top_fcmp_32nfYi
+INFO-FLOW: Found component LSTM_Top_mux_1568g8j.
+INFO-FLOW: Append model LSTM_Top_mux_1568g8j
+INFO-FLOW: Found component LSTM_Top_mux_832_hbi.
+INFO-FLOW: Append model LSTM_Top_mux_832_hbi
+INFO-FLOW: Found component LSTM_Top_mac_mulaibs.
+INFO-FLOW: Append model LSTM_Top_mac_mulaibs
+INFO-FLOW: Found component LSTM_Top_mul_mul_jbC.
+INFO-FLOW: Append model LSTM_Top_mul_mul_jbC
+INFO-FLOW: Found component LSTM_Top_mac_mulakbM.
+INFO-FLOW: Append model LSTM_Top_mac_mulakbM
+INFO-FLOW: Found component LSTM_Top_mul_mul_lbW.
+INFO-FLOW: Append model LSTM_Top_mul_mul_lbW
+INFO-FLOW: Found component infer_Weight_f_V.
+INFO-FLOW: Append model infer_Weight_f_V
+INFO-FLOW: Found component infer_Weight_i_V.
+INFO-FLOW: Append model infer_Weight_i_V
+INFO-FLOW: Found component infer_Weight_c_V.
+INFO-FLOW: Append model infer_Weight_c_V
+INFO-FLOW: Found component infer_Weight_o_V.
+INFO-FLOW: Append model infer_Weight_o_V
+INFO-FLOW: Found component infer_Weight_lc_V.
+INFO-FLOW: Append model infer_Weight_lc_V
+INFO-FLOW: Found component infer_Bias_f_V.
+INFO-FLOW: Append model infer_Bias_f_V
+INFO-FLOW: Found component infer_Bias_i_V.
+INFO-FLOW: Append model infer_Bias_i_V
+INFO-FLOW: Found component infer_Bias_c_V.
+INFO-FLOW: Append model infer_Bias_c_V
+INFO-FLOW: Found component infer_Bias_o_V.
+INFO-FLOW: Append model infer_Bias_o_V
+INFO-FLOW: Found component infer_Bias_lc_V.
+INFO-FLOW: Append model infer_Bias_lc_V
+INFO-FLOW: Found component infer_i_0_V.
+INFO-FLOW: Append model infer_i_0_V
+INFO-FLOW: Found component infer_x_prev_V.
+INFO-FLOW: Append model infer_x_prev_V
+INFO-FLOW: Handling components in module [mnist_lstm] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+INFO-FLOW: Found component LSTM_Top_fdiv_32nmb6.
+INFO-FLOW: Append model LSTM_Top_fdiv_32nmb6
+INFO-FLOW: Found component mnist_lstm_img_dat.
+INFO-FLOW: Append model mnist_lstm_img_dat
+INFO-FLOW: Found component mnist_lstm_res.
+INFO-FLOW: Append model mnist_lstm_res
+INFO-FLOW: Handling components in module [LSTM_Top] ... 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: Append model should_skip
+INFO-FLOW: Append model sigmoid
+INFO-FLOW: Append model tanh
+INFO-FLOW: Append model infer
+INFO-FLOW: Append model mnist_lstm
+INFO-FLOW: Append model LSTM_Top
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: LSTM_Top_dcmp_64nbkb sigmoid_Sigmoid_lcud tanh_Tanh_lut_V LSTM_Top_fsub_32ndEe LSTM_Top_fpext_32eOg LSTM_Top_fcmp_32nfYi LSTM_Top_mux_1568g8j LSTM_Top_mux_832_hbi LSTM_Top_mac_mulaibs LSTM_Top_mul_mul_jbC LSTM_Top_mac_mulakbM LSTM_Top_mul_mul_lbW infer_Weight_f_V infer_Weight_i_V infer_Weight_c_V infer_Weight_o_V infer_Weight_lc_V infer_Bias_f_V infer_Bias_i_V infer_Bias_c_V infer_Bias_o_V infer_Bias_lc_V infer_i_0_V infer_x_prev_V LSTM_Top_fdiv_32nmb6 mnist_lstm_img_dat mnist_lstm_res should_skip sigmoid tanh infer mnist_lstm LSTM_Top
+INFO-FLOW: To file: write model LSTM_Top_dcmp_64nbkb
+INFO-FLOW: To file: write model sigmoid_Sigmoid_lcud
+INFO-FLOW: To file: write model tanh_Tanh_lut_V
+INFO-FLOW: To file: write model LSTM_Top_fsub_32ndEe
+INFO-FLOW: To file: write model LSTM_Top_fpext_32eOg
+INFO-FLOW: To file: write model LSTM_Top_fcmp_32nfYi
+INFO-FLOW: To file: write model LSTM_Top_mux_1568g8j
+INFO-FLOW: To file: write model LSTM_Top_mux_832_hbi
+INFO-FLOW: To file: write model LSTM_Top_mac_mulaibs
+INFO-FLOW: To file: write model LSTM_Top_mul_mul_jbC
+INFO-FLOW: To file: write model LSTM_Top_mac_mulakbM
+INFO-FLOW: To file: write model LSTM_Top_mul_mul_lbW
+INFO-FLOW: To file: write model infer_Weight_f_V
+INFO-FLOW: To file: write model infer_Weight_i_V
+INFO-FLOW: To file: write model infer_Weight_c_V
+INFO-FLOW: To file: write model infer_Weight_o_V
+INFO-FLOW: To file: write model infer_Weight_lc_V
+INFO-FLOW: To file: write model infer_Bias_f_V
+INFO-FLOW: To file: write model infer_Bias_i_V
+INFO-FLOW: To file: write model infer_Bias_c_V
+INFO-FLOW: To file: write model infer_Bias_o_V
+INFO-FLOW: To file: write model infer_Bias_lc_V
+INFO-FLOW: To file: write model infer_i_0_V
+INFO-FLOW: To file: write model infer_x_prev_V
+INFO-FLOW: To file: write model LSTM_Top_fdiv_32nmb6
+INFO-FLOW: To file: write model mnist_lstm_img_dat
+INFO-FLOW: To file: write model mnist_lstm_res
+INFO-FLOW: To file: write model should_skip
+INFO-FLOW: To file: write model sigmoid
+INFO-FLOW: To file: write model tanh
+INFO-FLOW: To file: write model infer
+INFO-FLOW: To file: write model mnist_lstm
+INFO-FLOW: To file: write model LSTM_Top
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'sigmoid_Sigmoid_lcud_rom' using distributed ROMs.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'tanh_Tanh_lut_V_rom' using distributed ROMs.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'infer_Weight_f_V_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Weight_i_V_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Weight_c_V_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Weight_o_V_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Weight_lc_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Bias_f_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Bias_i_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Bias_c_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Bias_o_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'infer_Bias_lc_V_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'infer_i_0_V_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'infer_x_prev_V_ram (RAM)' using block RAMs.
+Command       ap_source done; 3.688 sec.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'mnist_lstm_img_dat_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'mnist_lstm_res_ram (RAM)' using block RAMs.
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=LSTM_Top xml_exists=0
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=33 #gSsdmPorts=28
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+Execute       sc_get_clocks LSTM_Top 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/misc/LSTM_Top_ap_dcmp_0_no_dsp_64_ip.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/misc/LSTM_Top_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/misc/LSTM_Top_ap_fdiv_10_no_dsp_32_ip.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/misc/LSTM_Top_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute       source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/misc/LSTM_Top_ap_fsub_2_full_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:09:16 ; elapsed = 00:25:32 . Memory (MB): peak = 1104.590 ; gain = 1019.785
+INFO: [SYSC 207-301] Generating SystemC RTL for LSTM_Top.
+INFO: [VHDL 208-304] Generating VHDL RTL for LSTM_Top.
+INFO: [VLOG 209-307] Generating Verilog RTL for LSTM_Top.
+Command     autosyn done; 1389.44 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 1531.07 sec.
+Command ap_source done; 1531.31 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.163 sec.
+INFO-FLOW: Workspace D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1 opened at Wed Apr 16 07:34:20 +0800 2025
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.129 sec.
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.178 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.189 sec.
+Command     ap_source done; 0.194 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-2 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-2'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.517 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=LSTM_Top xml_exists=1
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/should_skip.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/sigmoid.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/tanh.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/infer.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/mnist_lstm.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.compgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=28
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=LSTM_Top
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=LSTM_Top
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.rtl_wrap.cfg.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.constraint.tcl 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/LSTM_Top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec D:/Xilinx/Project/LSTM/lstm_hls/lstm_fpga/lstm_hls_opt/solution1/impl/ip/pack.bat
+Command   export_design done; 22.781 sec.
+Command ap_source done; 23.319 sec.
+Execute cleanup_all 

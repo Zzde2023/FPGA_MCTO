@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1744999190965">
+  <ports id="1" name="input_stream_V_data_V" type="PortType" originalName="input_stream.V.data.V" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="input_stream_V_keep_V" type="PortType" originalName="input_stream.V.keep.V" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="input_stream_V_strb_V" type="PortType" originalName="input_stream.V.strb.V" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="input_stream_V_user_V" type="PortType" originalName="input_stream.V.user.V" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="input_stream_V_last_V" type="PortType" originalName="input_stream.V.last.V" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="input_stream_V_id_V" type="PortType" originalName="input_stream.V.id.V" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="input_stream_V_dest_V" type="PortType" originalName="input_stream.V.dest.V" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="output_stream_V_data_V" type="PortType" originalName="output_stream.V.data.V" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="output_stream_V_keep_V" type="PortType" originalName="output_stream.V.keep.V" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="10" name="output_stream_V_strb_V" type="PortType" originalName="output_stream.V.strb.V" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="output_stream_V_user_V" type="PortType" originalName="output_stream.V.user.V" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="output_stream_V_last_V" type="PortType" originalName="output_stream.V.last.V" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="output_stream_V_id_V" type="PortType" originalName="output_stream.V.id.V" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="output_stream_V_dest_V" type="PortType" originalName="output_stream.V.dest.V" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="147" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="148" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="149" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="150" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="151" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="152" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="153" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="157" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="161" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="171" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.7"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.8"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.9"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.10"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.11"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.12"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.13"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="188" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="189" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="190" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="191" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="192" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="193" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="194" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="195" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="196" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="197" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="198" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="199" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="200" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="201" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="202" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="203" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="204" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="205" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="206" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="207" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="208" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="209" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="210" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="211" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="212" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="213" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="214" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="215" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="216" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="217" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="218" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="219" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="220" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="221" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="222" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="223" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="224" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="225" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="226" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="227" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="228" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="229" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="230" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="231" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="232" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="233" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="234" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="235" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="236" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="237" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="238" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="239" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="240" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="241" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="242" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="243" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="244" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="245" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="246" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="247" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="248" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="249" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="250" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="251" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="252" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="253" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="254" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="255" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="256" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="257" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="258" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="259" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="260" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="261" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="262" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="263" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="264" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="265" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="266" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="267" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="268" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="269" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="270" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="537" RegionName="BiLSTM_Top">
+    <basic_blocks id="132" name="BiLSTM_Top" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="res_9" lineNumber="37" originalName="res[9]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_9_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="res_8" lineNumber="37" originalName="res[8]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_8_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="res_7" lineNumber="37" originalName="res[7]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_7_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="res_6" lineNumber="37" originalName="res[6]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_6_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="res_5" lineNumber="37" originalName="res[5]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_5_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="res_4" lineNumber="37" originalName="res[4]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_4_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="res_3" lineNumber="37" originalName="res[3]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_3_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="res_2" lineNumber="37" originalName="res[2]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_2_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="res_1" lineNumber="37" originalName="res[1]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_1_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="res_0" lineNumber="37" originalName="res[0]" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="res_0_U" coreName="FIFO" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="37" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="input_ping" lineNumber="35" originalName="input_ping" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="input_ping_U" coreName="RAM" contextFuncName="BiLSTM_Top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="35" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="data_lens_load_loc_c" rtlName="data_lens_load_loc_c_U" coreName="FIFO" bitwidth="7" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <dataInputObjs>input_stream_V_data_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_keep_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_strb_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_user_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_last_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_id_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_dest_V</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>Block_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="node_129" rtlName="lstm_infer_U0" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.4" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>lstm_infer</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="node_130" lineNumber="45" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." rtlName="write_output_U0" contextFuncName="BiLSTM_Top" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.79" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="45" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>output_stream_V_data_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_user_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_last_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_id_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_dest_V</dataOutputObjs>
+        <constName>write_output</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="node_131" lineNumber="63" fileName="bi_lstm/src/rnn_top.cpp" fileDirectory=".." contextFuncName="BiLSTM_Top" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="bi_lstm/src/rnn_top.cpp" linenumber="63" fileDirectory="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga" functionName="BiLSTM_Top"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="bi_lstm/src/rnn_top.cpp">
+        <validLinenumbers>37</validLinenumbers>
+        <validLinenumbers>35</validLinenumbers>
+        <validLinenumbers>45</validLinenumbers>
+        <validLinenumbers>63</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="data_lens_load_loc_c_reg_559">
+    <nodeIds>128</nodeIds>
+  </regnodes>
+  <regnodes realName="res_0_reg_553">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="res_8_reg_505">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="res_3_reg_535">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="res_7_reg_511">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="res_9_reg_499">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="res_2_reg_541">
+    <nodeIds>105</nodeIds>
+  </regnodes>
+  <regnodes realName="res_6_reg_517">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="res_1_reg_547">
+    <nodeIds>106</nodeIds>
+  </regnodes>
+  <regnodes realName="res_5_reg_523">
+    <nodeIds>102</nodeIds>
+  </regnodes>
+  <regnodes realName="res_4_reg_529">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <expressionNodes realName="input_ping_alloca_fu_266">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_0_fu_262">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_8_fu_230">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_2_fu_254">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_3_fu_250">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_5_fu_242">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_6_fu_238">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_9_fu_226">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_7_fu_234">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_1_fu_258">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_4_fu_246">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Block_proc_fu_476">
+    <nodeIds>128</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_write_output_fu_448">
+    <nodeIds>130</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_lstm_infer_fu_270">
+    <nodeIds>129</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="Weight_f_b_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_b_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_f_f_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc1_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc2_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc2_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc2_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc2_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_fc2_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_b_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_g_f_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_b_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_i_f_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_b_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_0" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_1" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_2" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_3" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_4" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_5" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_6" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Weight_o_f_V_7" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="data_lens" portID="100">
+    <nodeIds>128</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sigmoid_lut_V" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="tanh_lut_V" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="tanh_lut_V162" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="tanh_lut_V163" portID="100">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <ioPorts name="input_stream_V_data_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_dest_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_id_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_keep_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_last_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_strb_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_user_V">
+    <contents name="call">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_data_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_dest_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_id_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_keep_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_last_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_strb_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_user_V">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="128" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="128" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="129" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="129" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="130" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="130" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="BiLSTM_Top" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4752" mMaxLatency="124628" mIsDfPipe="true">
+      <basicBlocks>132</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst">
+        <processe_list name="Block_proc_U0" ssdmobj_id="128">
+          <pins>
+            <port name="input_stream_V_data_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_keep_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_strb_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_user_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_last_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_id_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_dest_V" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="input_ping" dir="DirInOut" type="BUSType"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="seq" dir="DirEnd" type="MEMType"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="data_lens" dir="DirInOut"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+          <pins>
+            <port name="ap_return" dir="DirEnd" type="BUSType"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </pins>
+        </processe_list>
+        <processe_list name="lstm_infer_U0" ssdmobj_id="129">
+          <pins>
+            <port name="input" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="p_read" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_0" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_1" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_2" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_3" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_4" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_5" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_6" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_7" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_8" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="ress_9" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_f_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_f_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_f_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_f_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="sigmoid_lut_V" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="tanh_lut_V163" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="tanh_lut_V162" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="tanh_lut_V" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_i_b_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_f_b_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_g_b_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_o_b_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_5" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_6" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc1_V_7" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc2_V_0" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc2_V_1" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc2_V_2" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc2_V_3" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+          <pins>
+            <port name="Weight_fc2_V_4" dir="DirInOut"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </pins>
+        </processe_list>
+        <processe_list name="write_output_U0" ssdmobj_id="130">
+          <pins>
+            <port name="output_stream_V_data_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_keep_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_strb_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_user_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_last_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_id_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_dest_V" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_0" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_1" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_2" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_3" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_4" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_5" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_6" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_7" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_8" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+          <pins>
+            <port name="res_9" dir="DirEnd"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="input_ping" ssdmobj_id="124">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="7" name="data_lens_load_loc_c" ssdmobj_id="128">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Block_proc_U0" ssdmobj_id="128" object_id="_178"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_0" ssdmobj_id="107">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_1" ssdmobj_id="106">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_2" ssdmobj_id="105">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_3" ssdmobj_id="104">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_4" ssdmobj_id="103">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_5" ssdmobj_id="102">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_6" ssdmobj_id="101">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_7" ssdmobj_id="100">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_8" ssdmobj_id="99">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="res_9" ssdmobj_id="98">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="lstm_infer_U0" ssdmobj_id="129" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_output_U0" ssdmobj_id="130" object_id="_390"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

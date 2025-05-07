@@ -1,0 +1,210 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Block_proc'" level="0">
+<item name = "Date">Sat Apr 19 01:58:36 2025
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">bi_lstm</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 2.771, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">3906, 3906, 3906, 3906, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_read_input_fu_49">read_input, 3902, 3902, 3902, 3902, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 54</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 85, 86</column>
+<column name="Memory">1, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 73</column>
+<column name="Register">-, -, 155, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_read_input_fu_49">read_input, 0, 0, 85, 86</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="data_lens_U">Block_proc_data_lbkb, 1, 0, 0, 300, 7, 1, 2100</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="seq_assign_fu_80_p2">+, 0, 0, 32, 32, 1</column>
+<column name="input_stream_V_data_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_data_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_dest_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_dest_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_id_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_id_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_keep_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_keep_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_last_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_last_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_strb_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_strb_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_user_V_0_load_A">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_user_V_0_load_B">and, 0, 0, 1, 1, 1</column>
+<column name="input_stream_V_data_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_dest_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_id_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_keep_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_last_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_strb_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="input_stream_V_user_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">4, 6, 1, 6</column>
+<column name="ap_done">3, 2, 1, 2</column>
+<column name="input_stream_V_data_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_data_V_0_data_out">3, 2, 32, 64</column>
+<column name="input_stream_V_data_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_dest_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_dest_V_0_data_out">3, 2, 1, 2</column>
+<column name="input_stream_V_dest_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_id_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_id_V_0_data_out">3, 2, 1, 2</column>
+<column name="input_stream_V_id_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_keep_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_keep_V_0_data_out">3, 2, 4, 8</column>
+<column name="input_stream_V_keep_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_last_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_last_V_0_data_out">3, 2, 1, 2</column>
+<column name="input_stream_V_last_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_strb_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_strb_V_0_data_out">3, 2, 4, 8</column>
+<column name="input_stream_V_strb_V_0_state">3, 3, 2, 6</column>
+<column name="input_stream_V_user_V_0_ack_out">3, 2, 1, 2</column>
+<column name="input_stream_V_user_V_0_data_out">3, 2, 1, 2</column>
+<column name="input_stream_V_user_V_0_state">3, 3, 2, 6</column>
+<column name="seq">3, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="grp_read_input_fu_49_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_stream_V_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="input_stream_V_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="input_stream_V_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_data_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_data_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_dest_V_0_payload_A">1, 0, 1, 0</column>
+<column name="input_stream_V_dest_V_0_payload_B">1, 0, 1, 0</column>
+<column name="input_stream_V_dest_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_dest_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_dest_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_id_V_0_payload_A">1, 0, 1, 0</column>
+<column name="input_stream_V_id_V_0_payload_B">1, 0, 1, 0</column>
+<column name="input_stream_V_id_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_id_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_id_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_keep_V_0_payload_A">4, 0, 4, 0</column>
+<column name="input_stream_V_keep_V_0_payload_B">4, 0, 4, 0</column>
+<column name="input_stream_V_keep_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_keep_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_keep_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="input_stream_V_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="input_stream_V_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_last_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_last_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_strb_V_0_payload_A">4, 0, 4, 0</column>
+<column name="input_stream_V_strb_V_0_payload_B">4, 0, 4, 0</column>
+<column name="input_stream_V_strb_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_strb_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_strb_V_0_state">2, 0, 2, 0</column>
+<column name="input_stream_V_user_V_0_payload_A">1, 0, 1, 0</column>
+<column name="input_stream_V_user_V_0_payload_B">1, 0, 1, 0</column>
+<column name="input_stream_V_user_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="input_stream_V_user_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="input_stream_V_user_V_0_state">2, 0, 2, 0</column>
+<column name="seq">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Block__proc, return value</column>
+<column name="ap_return">out, 7, ap_ctrl_hs, Block__proc, return value</column>
+<column name="input_stream_TDATA">in, 32, axis, input_stream_V_data_V, pointer</column>
+<column name="input_stream_TVALID">in, 1, axis, input_stream_V_dest_V, pointer</column>
+<column name="input_stream_TREADY">out, 1, axis, input_stream_V_dest_V, pointer</column>
+<column name="input_stream_TDEST">in, 1, axis, input_stream_V_dest_V, pointer</column>
+<column name="input_stream_TKEEP">in, 4, axis, input_stream_V_keep_V, pointer</column>
+<column name="input_stream_TSTRB">in, 4, axis, input_stream_V_strb_V, pointer</column>
+<column name="input_stream_TUSER">in, 1, axis, input_stream_V_user_V, pointer</column>
+<column name="input_stream_TLAST">in, 1, axis, input_stream_V_last_V, pointer</column>
+<column name="input_stream_TID">in, 1, axis, input_stream_V_id_V, pointer</column>
+<column name="input_ping_address0">out, 12, ap_memory, input_ping, array</column>
+<column name="input_ping_ce0">out, 1, ap_memory, input_ping, array</column>
+<column name="input_ping_we0">out, 1, ap_memory, input_ping, array</column>
+<column name="input_ping_d0">out, 32, ap_memory, input_ping, array</column>
+</table>
+</item>
+</section>
+</profile>

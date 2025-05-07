@@ -1,0 +1,59 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'infer'" level="0">
+<item name = "Date">Sun Apr 27 23:37:05 2025
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">lstm_hls_fixed8</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.719, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1159637, 1159637, 1159637, 1159637, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_gemvm_quant_fu_5259">gemvm_quant, 9988, 9988, 9988, 9988, none</column>
+<column name="grp_fc_layer_fu_5270">fc_layer, 644, 644, 644, 644, none</column>
+<column name="grp_tanh_fu_5280">tanh, 159, 159, 159, 159, none</column>
+<column name="grp_tanh_1_fu_5286">tanh_1, 159, 159, 159, 159, none</column>
+<column name="grp_sigmoid_fu_5291">sigmoid, 159, 159, 159, 159, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1158920, 1158920, 41390, -, -, 28, no</column>
+<column name=" + Loop 1.1">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.2">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.3">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.4">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.5">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.6">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.7">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 1.8">128, 128, 8, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

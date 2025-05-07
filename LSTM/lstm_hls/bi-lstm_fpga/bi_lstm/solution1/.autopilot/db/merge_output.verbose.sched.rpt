@@ -1,0 +1,466 @@
+
+
+================================================================
+== Vivado HLS Report for 'merge_output'
+================================================================
+* Date:           Sat Apr 19 01:58:03 2025
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        bi_lstm
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.755|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    6|    6|    6|    6|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.75>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%h_backward_1_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 8 'read' 'h_backward_1_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%h_backward_0_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 9 'read' 'h_backward_0_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%h_forward_1_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 10 'read' 'h_forward_1_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%h_forward_0_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 11 'read' 'h_forward_0_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%h_out_0_V_addr = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 12 'getelementptr' 'h_out_0_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_0_V_re_1, i16* %h_out_0_V_addr, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 13 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%h_out_2_V_addr = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 14 'getelementptr' 'h_out_2_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_0_V_r_1, i16* %h_out_2_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 15 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%h_out_1_V_addr = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 16 'getelementptr' 'h_out_1_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_0_V_re_1, i16* %h_out_1_V_addr, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 17 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%h_out_3_V_addr = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 18 'getelementptr' 'h_out_3_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_0_V_r_1, i16* %h_out_3_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 19 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%h_backward_7_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 20 'read' 'h_backward_7_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%h_backward_6_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 21 'read' 'h_backward_6_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%h_backward_5_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 22 'read' 'h_backward_5_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%h_backward_4_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 23 'read' 'h_backward_4_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%h_backward_3_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 24 'read' 'h_backward_3_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%h_backward_2_0_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_0_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 25 'read' 'h_backward_2_0_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%h_backward_1_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 26 'read' 'h_backward_1_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%h_backward_0_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 27 'read' 'h_backward_0_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%h_forward_7_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 28 'read' 'h_forward_7_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%h_forward_6_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 29 'read' 'h_forward_6_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%h_forward_5_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 30 'read' 'h_forward_5_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%h_forward_4_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 31 'read' 'h_forward_4_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%h_forward_3_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 32 'read' 'h_forward_3_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%h_forward_2_0_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_0_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 33 'read' 'h_forward_2_0_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%h_forward_1_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 34 'read' 'h_forward_1_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%h_forward_0_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 35 'read' 'h_forward_0_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_1 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 36 'getelementptr' 'h_out_2_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_0_V_re_1, i16* %h_out_2_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 37 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%h_out_4_V_addr = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 38 'getelementptr' 'h_out_4_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_0_V_r_1, i16* %h_out_4_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 39 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_1 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 40 'getelementptr' 'h_out_3_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_0_V_re_1, i16* %h_out_3_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 41 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%h_out_5_V_addr = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 42 'getelementptr' 'h_out_5_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_0_V_r_1, i16* %h_out_5_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_1 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 44 'getelementptr' 'h_out_4_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_0_V_re_1, i16* %h_out_4_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 45 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%h_out_6_V_addr = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 46 'getelementptr' 'h_out_6_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_0_V_r_1, i16* %h_out_6_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 47 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_1 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 48 'getelementptr' 'h_out_5_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_0_V_re_1, i16* %h_out_5_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 49 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%h_out_7_V_addr = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:81]   --->   Operation 50 'getelementptr' 'h_out_7_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_0_V_r_1, i16* %h_out_7_V_addr, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 51 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_1 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 52 'getelementptr' 'h_out_6_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_0_V_re_1, i16* %h_out_6_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 53 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_1 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 54 'getelementptr' 'h_out_0_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_0_V_r_1, i16* %h_out_0_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 55 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_1 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 0" [bi_lstm/src/rnn.cpp:80]   --->   Operation 56 'getelementptr' 'h_out_7_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_0_V_re_1, i16* %h_out_7_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 57 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_1 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 58 'getelementptr' 'h_out_1_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_0_V_r_1, i16* %h_out_1_V_addr_1, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 59 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_2 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 60 'getelementptr' 'h_out_0_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_1_V_re_1, i16* %h_out_0_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 61 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_2 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 62 'getelementptr' 'h_out_2_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_1_V_r_1, i16* %h_out_2_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 63 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_2 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 64 'getelementptr' 'h_out_1_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_1_V_re_1, i16* %h_out_1_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 65 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_2 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 66 'getelementptr' 'h_out_3_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_1_V_r_1, i16* %h_out_3_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 67 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%h_backward_7_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 68 'read' 'h_backward_7_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%h_backward_6_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 69 'read' 'h_backward_6_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%h_backward_5_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 70 'read' 'h_backward_5_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%h_backward_4_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 71 'read' 'h_backward_4_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%h_backward_3_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 72 'read' 'h_backward_3_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%h_backward_2_1_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_1_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 73 'read' 'h_backward_2_1_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%h_backward_1_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 74 'read' 'h_backward_1_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%h_backward_0_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 75 'read' 'h_backward_0_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%h_forward_7_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 76 'read' 'h_forward_7_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%h_forward_6_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 77 'read' 'h_forward_6_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%h_forward_5_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 78 'read' 'h_forward_5_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%h_forward_4_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 79 'read' 'h_forward_4_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%h_forward_3_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 80 'read' 'h_forward_3_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%h_forward_2_1_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_1_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 81 'read' 'h_forward_2_1_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%h_forward_1_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 82 'read' 'h_forward_1_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%h_forward_0_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 83 'read' 'h_forward_0_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_3 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 84 'getelementptr' 'h_out_2_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_1_V_re_1, i16* %h_out_2_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 85 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_2 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 86 'getelementptr' 'h_out_4_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_1_V_r_1, i16* %h_out_4_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 87 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_3 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 88 'getelementptr' 'h_out_3_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_1_V_re_1, i16* %h_out_3_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 89 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_2 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 90 'getelementptr' 'h_out_5_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_1_V_r_1, i16* %h_out_5_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 91 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_3 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 92 'getelementptr' 'h_out_4_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_1_V_re_1, i16* %h_out_4_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 93 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_2 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 94 'getelementptr' 'h_out_6_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_1_V_r_1, i16* %h_out_6_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 95 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_3 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 96 'getelementptr' 'h_out_5_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_1_V_re_1, i16* %h_out_5_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 97 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_2 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 7" [bi_lstm/src/rnn.cpp:81]   --->   Operation 98 'getelementptr' 'h_out_7_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_1_V_r_1, i16* %h_out_7_V_addr_2, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 99 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_3 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 100 'getelementptr' 'h_out_6_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_1_V_re_1, i16* %h_out_6_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 101 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_3 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 102 'getelementptr' 'h_out_0_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_1_V_r_1, i16* %h_out_0_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 103 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_3 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 1" [bi_lstm/src/rnn.cpp:80]   --->   Operation 104 'getelementptr' 'h_out_7_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_1_V_re_1, i16* %h_out_7_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 105 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_3 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 106 'getelementptr' 'h_out_1_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_1_V_r_1, i16* %h_out_1_V_addr_3, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 107 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_4 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 108 'getelementptr' 'h_out_0_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_2_V_re_1, i16* %h_out_0_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 109 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_4 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 110 'getelementptr' 'h_out_2_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_2_V_r_1, i16* %h_out_2_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 111 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_4 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 112 'getelementptr' 'h_out_1_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_2_V_re_1, i16* %h_out_1_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 113 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_4 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 114 'getelementptr' 'h_out_3_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_2_V_r_1, i16* %h_out_3_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 115 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%h_backward_7_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 116 'read' 'h_backward_7_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%h_backward_6_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 117 'read' 'h_backward_6_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (0.00ns)   --->   "%h_backward_5_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 118 'read' 'h_backward_5_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%h_backward_4_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 119 'read' 'h_backward_4_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%h_backward_3_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 120 'read' 'h_backward_3_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (0.00ns)   --->   "%h_backward_2_2_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_2_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 121 'read' 'h_backward_2_2_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 122 [1/1] (0.00ns)   --->   "%h_backward_1_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 122 'read' 'h_backward_1_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%h_backward_0_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 123 'read' 'h_backward_0_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%h_forward_7_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 124 'read' 'h_forward_7_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 125 [1/1] (0.00ns)   --->   "%h_forward_6_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 125 'read' 'h_forward_6_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 126 [1/1] (0.00ns)   --->   "%h_forward_5_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 126 'read' 'h_forward_5_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (0.00ns)   --->   "%h_forward_4_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 127 'read' 'h_forward_4_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%h_forward_3_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 128 'read' 'h_forward_3_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "%h_forward_2_2_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_2_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 129 'read' 'h_forward_2_2_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "%h_forward_1_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 130 'read' 'h_forward_1_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "%h_forward_0_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 131 'read' 'h_forward_0_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 132 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_5 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 132 'getelementptr' 'h_out_2_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 133 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_2_V_re_1, i16* %h_out_2_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 133 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 134 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_4 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 134 'getelementptr' 'h_out_4_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 135 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_2_V_r_1, i16* %h_out_4_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 135 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_5 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 136 'getelementptr' 'h_out_3_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 137 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_2_V_re_1, i16* %h_out_3_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 137 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 138 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_4 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 138 'getelementptr' 'h_out_5_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 139 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_2_V_r_1, i16* %h_out_5_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 139 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_5 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 140 'getelementptr' 'h_out_4_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 141 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_2_V_re_1, i16* %h_out_4_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 141 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_4 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 142 'getelementptr' 'h_out_6_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_2_V_r_1, i16* %h_out_6_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 143 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 144 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_5 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 144 'getelementptr' 'h_out_5_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 145 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_2_V_re_1, i16* %h_out_5_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 145 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_4 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 8" [bi_lstm/src/rnn.cpp:81]   --->   Operation 146 'getelementptr' 'h_out_7_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 147 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_2_V_r_1, i16* %h_out_7_V_addr_4, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 147 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_5 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 148 'getelementptr' 'h_out_6_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_2_V_re_1, i16* %h_out_6_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 149 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 150 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_5 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 150 'getelementptr' 'h_out_0_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 151 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_2_V_r_1, i16* %h_out_0_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 151 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_5 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 152 'getelementptr' 'h_out_7_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_2_V_re_1, i16* %h_out_7_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 153 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_5 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 154 'getelementptr' 'h_out_1_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_2_V_r_1, i16* %h_out_1_V_addr_5, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 155 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_6 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 156 'getelementptr' 'h_out_0_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_3_V_re_1, i16* %h_out_0_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 157 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 158 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_6 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 158 'getelementptr' 'h_out_2_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 159 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_3_V_r_1, i16* %h_out_2_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 159 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_6 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 160 'getelementptr' 'h_out_1_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_3_V_re_1, i16* %h_out_1_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 161 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_6 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 162 'getelementptr' 'h_out_3_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_3_V_r_1, i16* %h_out_3_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 163 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 164 [1/1] (0.00ns)   --->   "%h_backward_7_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 164 'read' 'h_backward_7_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 165 [1/1] (0.00ns)   --->   "%h_backward_6_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 165 'read' 'h_backward_6_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (0.00ns)   --->   "%h_backward_5_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 166 'read' 'h_backward_5_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%h_backward_4_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 167 'read' 'h_backward_4_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (0.00ns)   --->   "%h_backward_3_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 168 'read' 'h_backward_3_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 169 [1/1] (0.00ns)   --->   "%h_backward_2_3_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_3_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 169 'read' 'h_backward_2_3_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 170 [1/1] (0.00ns)   --->   "%h_backward_1_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 170 'read' 'h_backward_1_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 171 [1/1] (0.00ns)   --->   "%h_backward_0_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 171 'read' 'h_backward_0_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 172 [1/1] (0.00ns)   --->   "%h_forward_7_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 172 'read' 'h_forward_7_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 173 [1/1] (0.00ns)   --->   "%h_forward_6_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 173 'read' 'h_forward_6_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 174 [1/1] (0.00ns)   --->   "%h_forward_5_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 174 'read' 'h_forward_5_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 175 [1/1] (0.00ns)   --->   "%h_forward_4_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 175 'read' 'h_forward_4_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "%h_forward_3_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 176 'read' 'h_forward_3_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 177 [1/1] (0.00ns)   --->   "%h_forward_2_3_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_3_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 177 'read' 'h_forward_2_3_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 178 [1/1] (0.00ns)   --->   "%h_forward_1_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 178 'read' 'h_forward_1_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 179 [1/1] (0.00ns)   --->   "%h_forward_0_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 179 'read' 'h_forward_0_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 180 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_7 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 180 'getelementptr' 'h_out_2_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 181 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_3_V_re_1, i16* %h_out_2_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 181 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 182 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_6 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 182 'getelementptr' 'h_out_4_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 183 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_3_V_r_1, i16* %h_out_4_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 183 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 184 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_7 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 184 'getelementptr' 'h_out_3_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 185 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_3_V_re_1, i16* %h_out_3_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 185 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 186 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_6 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 186 'getelementptr' 'h_out_5_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 187 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_3_V_r_1, i16* %h_out_5_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 187 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_7 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 188 'getelementptr' 'h_out_4_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_3_V_re_1, i16* %h_out_4_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 189 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 190 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_6 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 190 'getelementptr' 'h_out_6_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 191 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_3_V_r_1, i16* %h_out_6_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 191 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 192 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_7 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 192 'getelementptr' 'h_out_5_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 193 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_3_V_re_1, i16* %h_out_5_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 193 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 194 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_6 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 9" [bi_lstm/src/rnn.cpp:81]   --->   Operation 194 'getelementptr' 'h_out_7_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 195 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_3_V_r_1, i16* %h_out_7_V_addr_6, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 195 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 196 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_7 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 196 'getelementptr' 'h_out_6_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 197 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_3_V_re_1, i16* %h_out_6_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 197 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_7 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 198 'getelementptr' 'h_out_0_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 199 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_3_V_r_1, i16* %h_out_0_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 199 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 200 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_7 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 3" [bi_lstm/src/rnn.cpp:80]   --->   Operation 200 'getelementptr' 'h_out_7_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 201 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_3_V_re_1, i16* %h_out_7_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 201 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 202 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_7 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 202 'getelementptr' 'h_out_1_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 203 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_3_V_r_1, i16* %h_out_1_V_addr_7, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 203 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 204 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_8 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 204 'getelementptr' 'h_out_0_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 205 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_4_V_re_1, i16* %h_out_0_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 205 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 206 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_8 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 206 'getelementptr' 'h_out_2_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 207 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_4_V_r_1, i16* %h_out_2_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 207 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 208 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_8 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 208 'getelementptr' 'h_out_1_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 209 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_4_V_re_1, i16* %h_out_1_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 209 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_5 : Operation 210 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_8 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 210 'getelementptr' 'h_out_3_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 211 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_4_V_r_1, i16* %h_out_3_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 211 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 212 [1/1] (0.00ns)   --->   "%h_backward_7_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 212 'read' 'h_backward_7_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "%h_backward_6_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 213 'read' 'h_backward_6_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (0.00ns)   --->   "%h_backward_5_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 214 'read' 'h_backward_5_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 215 [1/1] (0.00ns)   --->   "%h_backward_4_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 215 'read' 'h_backward_4_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 216 [1/1] (0.00ns)   --->   "%h_backward_3_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 216 'read' 'h_backward_3_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 217 [1/1] (0.00ns)   --->   "%h_backward_2_4_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_4_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 217 'read' 'h_backward_2_4_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 218 [1/1] (0.00ns)   --->   "%h_backward_1_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 218 'read' 'h_backward_1_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 219 [1/1] (0.00ns)   --->   "%h_backward_0_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 219 'read' 'h_backward_0_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 220 [1/1] (0.00ns)   --->   "%h_forward_7_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 220 'read' 'h_forward_7_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 221 [1/1] (0.00ns)   --->   "%h_forward_6_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 221 'read' 'h_forward_6_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 222 [1/1] (0.00ns)   --->   "%h_forward_5_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 222 'read' 'h_forward_5_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 223 [1/1] (0.00ns)   --->   "%h_forward_4_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 223 'read' 'h_forward_4_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 224 [1/1] (0.00ns)   --->   "%h_forward_3_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 224 'read' 'h_forward_3_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 225 [1/1] (0.00ns)   --->   "%h_forward_2_4_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_4_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 225 'read' 'h_forward_2_4_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 226 [1/1] (0.00ns)   --->   "%h_forward_1_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 226 'read' 'h_forward_1_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 227 [1/1] (0.00ns)   --->   "%h_forward_0_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 227 'read' 'h_forward_0_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 228 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_9 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 228 'getelementptr' 'h_out_2_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 229 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_4_V_re_1, i16* %h_out_2_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 229 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 230 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_8 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 230 'getelementptr' 'h_out_4_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 231 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_4_V_r_1, i16* %h_out_4_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 231 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 232 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_9 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 232 'getelementptr' 'h_out_3_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 233 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_4_V_re_1, i16* %h_out_3_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 233 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 234 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_8 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 234 'getelementptr' 'h_out_5_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 235 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_4_V_r_1, i16* %h_out_5_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 235 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 236 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_9 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 236 'getelementptr' 'h_out_4_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 237 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_4_V_re_1, i16* %h_out_4_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 237 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 238 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_8 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 238 'getelementptr' 'h_out_6_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 239 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_4_V_r_1, i16* %h_out_6_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 239 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 240 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_9 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 240 'getelementptr' 'h_out_5_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 241 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_4_V_re_1, i16* %h_out_5_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 241 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 242 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_8 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 10" [bi_lstm/src/rnn.cpp:81]   --->   Operation 242 'getelementptr' 'h_out_7_V_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 243 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_4_V_r_1, i16* %h_out_7_V_addr_8, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 243 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 244 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_9 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 244 'getelementptr' 'h_out_6_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 245 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_4_V_re_1, i16* %h_out_6_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 245 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 246 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_9 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 246 'getelementptr' 'h_out_0_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 247 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_4_V_r_1, i16* %h_out_0_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 247 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 248 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_9 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 4" [bi_lstm/src/rnn.cpp:80]   --->   Operation 248 'getelementptr' 'h_out_7_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 249 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_4_V_re_1, i16* %h_out_7_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 249 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 250 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_9 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 250 'getelementptr' 'h_out_1_V_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 251 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_4_V_r_1, i16* %h_out_1_V_addr_9, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 251 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 252 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_10 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 252 'getelementptr' 'h_out_0_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 253 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_5_V_re_1, i16* %h_out_0_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 253 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 254 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_10 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 254 'getelementptr' 'h_out_2_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 255 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_5_V_r_1, i16* %h_out_2_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 255 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 256 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_10 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 256 'getelementptr' 'h_out_1_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 257 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_5_V_re_1, i16* %h_out_1_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 257 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_6 : Operation 258 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_10 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 258 'getelementptr' 'h_out_3_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 259 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_5_V_r_1, i16* %h_out_3_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 259 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 260 [1/1] (0.00ns)   --->   "%h_backward_7_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_7_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 260 'read' 'h_backward_7_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 261 [1/1] (0.00ns)   --->   "%h_backward_6_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_6_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 261 'read' 'h_backward_6_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 262 [1/1] (0.00ns)   --->   "%h_backward_5_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_5_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 262 'read' 'h_backward_5_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 263 [1/1] (0.00ns)   --->   "%h_backward_4_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_4_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 263 'read' 'h_backward_4_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 264 [1/1] (0.00ns)   --->   "%h_backward_3_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_3_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 264 'read' 'h_backward_3_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 265 [1/1] (0.00ns)   --->   "%h_backward_2_5_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_2_5_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 265 'read' 'h_backward_2_5_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 266 [1/1] (0.00ns)   --->   "%h_backward_1_6_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_1_6_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 266 'read' 'h_backward_1_6_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 267 [1/1] (0.00ns)   --->   "%h_backward_0_6_V_r_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_backward_0_6_V_r)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 267 'read' 'h_backward_0_6_V_r_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 268 [1/1] (0.00ns)   --->   "%h_forward_7_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_7_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 268 'read' 'h_forward_7_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 269 [1/1] (0.00ns)   --->   "%h_forward_6_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_6_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 269 'read' 'h_forward_6_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 270 [1/1] (0.00ns)   --->   "%h_forward_5_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_5_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 270 'read' 'h_forward_5_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 271 [1/1] (0.00ns)   --->   "%h_forward_4_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_4_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 271 'read' 'h_forward_4_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 272 [1/1] (0.00ns)   --->   "%h_forward_3_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_3_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 272 'read' 'h_forward_3_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 273 [1/1] (0.00ns)   --->   "%h_forward_2_5_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_2_5_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 273 'read' 'h_forward_2_5_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 274 [1/1] (0.00ns)   --->   "%h_forward_1_6_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_1_6_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 274 'read' 'h_forward_1_6_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 275 [1/1] (0.00ns)   --->   "%h_forward_0_6_V_re_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_forward_0_6_V_re)" [bi_lstm/src/rnn.cpp:77]   --->   Operation 275 'read' 'h_forward_0_6_V_re_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 276 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_11 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 276 'getelementptr' 'h_out_2_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 277 [1/1] (1.75ns)   --->   "store i16 %h_forward_2_5_V_re_1, i16* %h_out_2_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 277 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 278 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_10 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 278 'getelementptr' 'h_out_4_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 279 [1/1] (1.75ns)   --->   "store i16 %h_backward_2_5_V_r_1, i16* %h_out_4_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 279 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 280 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_11 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 280 'getelementptr' 'h_out_3_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 281 [1/1] (1.75ns)   --->   "store i16 %h_forward_3_5_V_re_1, i16* %h_out_3_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 281 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 282 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_10 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 282 'getelementptr' 'h_out_5_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 283 [1/1] (1.75ns)   --->   "store i16 %h_backward_3_5_V_r_1, i16* %h_out_5_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 283 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 284 [1/1] (0.00ns)   --->   "%h_out_4_V_addr_11 = getelementptr [12 x i16]* %h_out_4_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 284 'getelementptr' 'h_out_4_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 285 [1/1] (1.75ns)   --->   "store i16 %h_forward_4_5_V_re_1, i16* %h_out_4_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 285 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 286 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_10 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 286 'getelementptr' 'h_out_6_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 287 [1/1] (1.75ns)   --->   "store i16 %h_backward_4_5_V_r_1, i16* %h_out_6_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 287 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 288 [1/1] (0.00ns)   --->   "%h_out_5_V_addr_11 = getelementptr [12 x i16]* %h_out_5_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 288 'getelementptr' 'h_out_5_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 289 [1/1] (1.75ns)   --->   "store i16 %h_forward_5_5_V_re_1, i16* %h_out_5_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 289 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 290 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_10 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 11" [bi_lstm/src/rnn.cpp:81]   --->   Operation 290 'getelementptr' 'h_out_7_V_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 291 [1/1] (1.75ns)   --->   "store i16 %h_backward_5_5_V_r_1, i16* %h_out_7_V_addr_10, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 291 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 292 [1/1] (0.00ns)   --->   "%h_out_6_V_addr_11 = getelementptr [12 x i16]* %h_out_6_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 292 'getelementptr' 'h_out_6_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 293 [1/1] (1.75ns)   --->   "store i16 %h_forward_6_5_V_re_1, i16* %h_out_6_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 293 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 294 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_11 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 12" [bi_lstm/src/rnn.cpp:81]   --->   Operation 294 'getelementptr' 'h_out_0_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 295 [1/1] (1.75ns)   --->   "store i16 %h_backward_6_5_V_r_1, i16* %h_out_0_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 295 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 296 [1/1] (0.00ns)   --->   "%h_out_7_V_addr_11 = getelementptr [12 x i16]* %h_out_7_V, i64 0, i64 5" [bi_lstm/src/rnn.cpp:80]   --->   Operation 296 'getelementptr' 'h_out_7_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 297 [1/1] (1.75ns)   --->   "store i16 %h_forward_7_5_V_re_1, i16* %h_out_7_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 297 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 298 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_11 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 12" [bi_lstm/src/rnn.cpp:81]   --->   Operation 298 'getelementptr' 'h_out_1_V_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 299 [1/1] (1.75ns)   --->   "store i16 %h_backward_7_5_V_r_1, i16* %h_out_1_V_addr_11, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 299 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 300 [1/1] (0.00ns)   --->   "%h_out_0_V_addr_12 = getelementptr [13 x i16]* %h_out_0_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:80]   --->   Operation 300 'getelementptr' 'h_out_0_V_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 301 [1/1] (1.75ns)   --->   "store i16 %h_forward_0_6_V_re_1, i16* %h_out_0_V_addr_12, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 301 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 302 [1/1] (0.00ns)   --->   "%h_out_2_V_addr_12 = getelementptr [13 x i16]* %h_out_2_V, i64 0, i64 12" [bi_lstm/src/rnn.cpp:81]   --->   Operation 302 'getelementptr' 'h_out_2_V_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 303 [1/1] (1.75ns)   --->   "store i16 %h_backward_0_6_V_r_1, i16* %h_out_2_V_addr_12, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 303 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 304 [1/1] (0.00ns)   --->   "%h_out_1_V_addr_12 = getelementptr [13 x i16]* %h_out_1_V, i64 0, i64 6" [bi_lstm/src/rnn.cpp:80]   --->   Operation 304 'getelementptr' 'h_out_1_V_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 305 [1/1] (1.75ns)   --->   "store i16 %h_forward_1_6_V_re_1, i16* %h_out_1_V_addr_12, align 2" [bi_lstm/src/rnn.cpp:80]   --->   Operation 305 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 306 [1/1] (0.00ns)   --->   "%h_out_3_V_addr_12 = getelementptr [13 x i16]* %h_out_3_V, i64 0, i64 12" [bi_lstm/src/rnn.cpp:81]   --->   Operation 306 'getelementptr' 'h_out_3_V_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 307 [1/1] (1.75ns)   --->   "store i16 %h_backward_1_6_V_r_1, i16* %h_out_3_V_addr_12, align 2" [bi_lstm/src/rnn.cpp:81]   --->   Operation 307 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 13> <RAM>
+ST_7 : Operation 308 [1/1] (0.00ns)   --->   "ret void" [bi_lstm/src/rnn.cpp:83]   --->   Operation 308 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_1_0_V_r' (bi_lstm/src/rnn.cpp:77) [151]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[1][0].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_3_V' [216]  (1.75 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_0_V_r' (bi_lstm/src/rnn.cpp:77) [114]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][0].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [240]  (1.75 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_1_V_r' (bi_lstm/src/rnn.cpp:77) [113]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][1].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [272]  (1.75 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_2_V_r' (bi_lstm/src/rnn.cpp:77) [112]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][2].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [304]  (1.75 ns)
+
+ <State 5>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_3_V_r' (bi_lstm/src/rnn.cpp:77) [111]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][3].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [336]  (1.75 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_4_V_r' (bi_lstm/src/rnn.cpp:77) [110]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][4].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [368]  (1.75 ns)
+
+ <State 7>: 1.75ns
+The critical path consists of the following:
+	wire read on port 'h_backward_7_5_V_r' (bi_lstm/src/rnn.cpp:77) [109]  (0 ns)
+	'store' operation (bi_lstm/src/rnn.cpp:81) of variable 'h_backward[7][5].V', bi_lstm/src/rnn.cpp:77 on array 'h_out_1_V' [400]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

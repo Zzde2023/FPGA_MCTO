@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="weight_sparse4.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\weight_sparse4.h"/>
+    <originFiles name="weight_sparse3.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\weight_sparse3.h"/>
+    <originFiles name="weight_sparse2.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\weight_sparse2.h"/>
+    <originFiles name="weight.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\weight.h"/>
+    <originFiles name="utils.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\utils.h"/>
+    <originFiles name="rnn_top.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\rnn_top.cpp"/>
+    <originFiles name="rnn.h" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\rnn.h"/>
+    <originFiles name="rnn.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\rnn.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\bi-lstm_fpga\bi_lstm_exit\src\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

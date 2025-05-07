@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/test_mixed_precision_lstm.cpp in debug mode
+   Generating csim.exe
+i'm in the main function !
+
+
+
+
+
+Current dir: D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\solution1\csim\build
+test on the road!
+Testing all images...
+274.191s usded, acc = 0.914300
+Test done.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

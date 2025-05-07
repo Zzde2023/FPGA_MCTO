@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:41:44.612+0800"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:20:50.285+0800"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:20:50.273+0800"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:19:16.170+0800"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:19:16.162+0800"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:14:50.116+0800"/>
+        <logs message="@E Simulation failed." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:14:50.104+0800"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:13:23.038+0800"/>
+        <logs message="@E Simulation failed." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:13:23.030+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-05T09:07:29.288+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T20:53:07.810+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T18:48:23.555+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T18:40:46.533+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T18:15:16.705+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T16:40:57.775+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T16:38:37.639+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T16:37:07.317+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T14:33:38.496+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T14:22:05.983+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T10:53:32.731+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T09:25:15.851+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T09:03:04.640+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T09:02:03.368+0800"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="dyn_quant" solutionName="solution1" date="2025-04-04T09:00:51.292+0800"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lstm.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\stock_lstm\src\lstm.cpp"/>
+    <originFiles name="lstm.h" path="D:\Xilinx\Project\LSTM\lstm_hls\stock_lstm\src\lstm.h"/>
+    <originFiles name="lstm_top.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\stock_lstm\src\lstm_top.cpp"/>
+    <originFiles name="utils.h" path="D:\Xilinx\Project\LSTM\lstm_hls\stock_lstm\src\utils.h"/>
+    <originFiles name="weight.h" path="D:\Xilinx\Project\LSTM\lstm_hls\stock_lstm\src\weight.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"LSTM_Top": {
+			"proto_instances": {
+			}
+		}
+	}
+}

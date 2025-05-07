@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fixed_lstm.h" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\fixed_lstm.h"/>
+    <originFiles name="fixed_lstm.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\fixed_lstm.cpp"/>
+    <originFiles name="weight.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\weight.cpp"/>
+    <originFiles name="infer_fixed.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\infer_fixed.cpp"/>
+    <originFiles name="utils.h" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\utils.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\main.cpp"/>
+    <originFiles name="test_mixed_precision_lstm.cpp" path="D:\Xilinx\Project\LSTM\lstm_hls\dynamic_quant\dyn_quant\src\test_mixed_precision_lstm.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

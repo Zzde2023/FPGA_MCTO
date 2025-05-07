@@ -1,0 +1,341 @@
+
+
+================================================================
+== Vivado HLS Report for 'lstm_infer_Loop_3_pr'
+================================================================
+* Date:           Sat Apr 19 01:58:16 2025
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        bi_lstm
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.321|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  103|  103|  103|  103|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  101|  101|         4|          2|          1|    50|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	6  / (exitcond5)
+	3  / (!exitcond5)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.46>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_4, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)"   --->   Operation 7 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_3, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)"   --->   Operation 8 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_2, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)"   --->   Operation 9 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_1, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)"   --->   Operation 10 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([100 x i7]* @Weight_fc2_V_0, [1 x i8]* @p_str22, [12 x i8]* @p_str40, [1 x i8]* @p_str22, i32 -1, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22, [1 x i8]* @p_str22)"   --->   Operation 11 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.46ns)   --->   "br label %.preheader378"   --->   Operation 12 'br' <Predicate = true> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%fc2_out_V_9_out = phi i16 [ %fc2_out_9_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 0, %newFuncRoot ]"   --->   Operation 13 'phi' 'fc2_out_V_9_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%fc2_out_V_8_out = phi i16 [ %fc2_out_8_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ -368, %newFuncRoot ]"   --->   Operation 14 'phi' 'fc2_out_V_8_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%fc2_out_V_7_out = phi i16 [ %fc2_out_7_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 128, %newFuncRoot ]"   --->   Operation 15 'phi' 'fc2_out_V_7_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%fc2_out_V_6_out = phi i16 [ %fc2_out_6_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 512, %newFuncRoot ]"   --->   Operation 16 'phi' 'fc2_out_V_6_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%fc2_out_V_5_out = phi i16 [ %fc2_out_5_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ -80, %newFuncRoot ]"   --->   Operation 17 'phi' 'fc2_out_V_5_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%fc2_out_V_4_out = phi i16 [ %fc2_out_4_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ -320, %newFuncRoot ]"   --->   Operation 18 'phi' 'fc2_out_V_4_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%fc2_out_V_3_out = phi i16 [ %fc2_out_3_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ -144, %newFuncRoot ]"   --->   Operation 19 'phi' 'fc2_out_V_3_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%fc2_out_V_2_out = phi i16 [ %fc2_out_2_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 384, %newFuncRoot ]"   --->   Operation 20 'phi' 'fc2_out_V_2_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%fc2_out_V_1_out = phi i16 [ %fc2_out_1_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ -192, %newFuncRoot ]"   --->   Operation 21 'phi' 'fc2_out_V_1_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%fc2_out_V_0_out = phi i16 [ %fc2_out_0_V, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 48, %newFuncRoot ]"   --->   Operation 22 'phi' 'fc2_out_V_0_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%j8 = phi i6 [ %j, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 0, %newFuncRoot ]"   --->   Operation 23 'phi' 'j8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%phi_mul = phi i13 [ %next_mul, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 0, %newFuncRoot ]"   --->   Operation 24 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%phi_urem = phi i6 [ %idx_urem, %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13 ], [ 0, %newFuncRoot ]"   --->   Operation 25 'phi' 'phi_urem' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.07ns)   --->   "%exitcond5 = icmp eq i6 %j8, -14" [bi_lstm/src/rnn.cpp:338]   --->   Operation 26 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50, i64 50, i64 50)"   --->   Operation 27 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.28ns)   --->   "%j = add i6 %j8, 1" [bi_lstm/src/rnn.cpp:338]   --->   Operation 28 'add' 'j' <Predicate = true> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %.preheader.0.exitStub, label %_ZN8ap_fixedILi16ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit13" [bi_lstm/src/rnn.cpp:338]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_16 = zext i6 %j8 to i64" [bi_lstm/src/rnn.cpp:340]   --->   Operation 30 'zext' 'tmp_16' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_16_cast = zext i6 %j8 to i7" [bi_lstm/src/rnn.cpp:343]   --->   Operation 31 'zext' 'tmp_16_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%Weight_fc2_V_0_addr = getelementptr [100 x i7]* @Weight_fc2_V_0, i64 0, i64 %tmp_16" [bi_lstm/src/rnn.cpp:343]   --->   Operation 32 'getelementptr' 'Weight_fc2_V_0_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (1.31ns)   --->   "%tmp = add i7 50, %tmp_16_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 33 'add' 'tmp' <Predicate = (!exitcond5)> <Delay = 1.31> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%Weight_fc2_V_1_addr = getelementptr [100 x i7]* @Weight_fc2_V_1, i64 0, i64 %tmp_16" [bi_lstm/src/rnn.cpp:343]   --->   Operation 34 'getelementptr' 'Weight_fc2_V_1_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%Weight_fc2_V_2_addr = getelementptr [100 x i7]* @Weight_fc2_V_2, i64 0, i64 %tmp_16" [bi_lstm/src/rnn.cpp:343]   --->   Operation 35 'getelementptr' 'Weight_fc2_V_2_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_117 = call i3 @_ssdm_op_PartSelect.i3.i13.i32.i32(i13 %phi_mul, i32 10, i32 12)" [bi_lstm/src/rnn.cpp:340]   --->   Operation 36 'partselect' 'tmp_117' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%newIndex5 = zext i3 %tmp_117 to i64" [bi_lstm/src/rnn.cpp:340]   --->   Operation 37 'zext' 'newIndex5' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%fc1_out_0_V_addr = getelementptr [5 x i16]* %fc1_out_0_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 38 'getelementptr' 'fc1_out_0_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (1.75ns)   --->   "%fc1_out_0_V_load = load i16* %fc1_out_0_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 39 'load' 'fc1_out_0_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%fc1_out_1_V_addr = getelementptr [5 x i16]* %fc1_out_1_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 40 'getelementptr' 'fc1_out_1_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 41 [2/2] (1.75ns)   --->   "%fc1_out_1_V_load = load i16* %fc1_out_1_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 41 'load' 'fc1_out_1_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%fc1_out_2_V_addr = getelementptr [5 x i16]* %fc1_out_2_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 42 'getelementptr' 'fc1_out_2_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 43 [2/2] (1.75ns)   --->   "%fc1_out_2_V_load = load i16* %fc1_out_2_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 43 'load' 'fc1_out_2_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%fc1_out_3_V_addr = getelementptr [5 x i16]* %fc1_out_3_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 44 'getelementptr' 'fc1_out_3_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 45 [2/2] (1.75ns)   --->   "%fc1_out_3_V_load = load i16* %fc1_out_3_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 45 'load' 'fc1_out_3_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%fc1_out_4_V_addr = getelementptr [5 x i16]* %fc1_out_4_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 46 'getelementptr' 'fc1_out_4_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (1.75ns)   --->   "%fc1_out_4_V_load = load i16* %fc1_out_4_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 47 'load' 'fc1_out_4_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%fc1_out_5_V_addr = getelementptr [5 x i16]* %fc1_out_5_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 48 'getelementptr' 'fc1_out_5_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (1.75ns)   --->   "%fc1_out_5_V_load = load i16* %fc1_out_5_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 49 'load' 'fc1_out_5_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%fc1_out_6_V_addr = getelementptr [5 x i16]* %fc1_out_6_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 50 'getelementptr' 'fc1_out_6_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 51 [2/2] (1.75ns)   --->   "%fc1_out_6_V_load = load i16* %fc1_out_6_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 51 'load' 'fc1_out_6_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%fc1_out_7_V_addr = getelementptr [5 x i16]* %fc1_out_7_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 52 'getelementptr' 'fc1_out_7_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 53 [2/2] (1.75ns)   --->   "%fc1_out_7_V_load = load i16* %fc1_out_7_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 53 'load' 'fc1_out_7_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%fc1_out_8_V_addr = getelementptr [5 x i16]* %fc1_out_8_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 54 'getelementptr' 'fc1_out_8_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 55 [2/2] (1.75ns)   --->   "%fc1_out_8_V_load = load i16* %fc1_out_8_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 55 'load' 'fc1_out_8_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%fc1_out_9_V_addr = getelementptr [5 x i16]* %fc1_out_9_V, i64 0, i64 %newIndex5" [bi_lstm/src/rnn.cpp:340]   --->   Operation 56 'getelementptr' 'fc1_out_9_V_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_2 : Operation 57 [2/2] (1.75ns)   --->   "%fc1_out_9_V_load = load i16* %fc1_out_9_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 57 'load' 'fc1_out_9_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_2 : Operation 58 [2/2] (2.77ns)   --->   "%Weight_fc2_V_0_load = load i7* %Weight_fc2_V_0_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 58 'load' 'Weight_fc2_V_0_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_2 : Operation 59 [2/2] (2.77ns)   --->   "%Weight_fc2_V_1_load = load i7* %Weight_fc2_V_1_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 59 'load' 'Weight_fc2_V_1_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_2 : Operation 60 [2/2] (2.77ns)   --->   "%Weight_fc2_V_2_load = load i7* %Weight_fc2_V_2_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 60 'load' 'Weight_fc2_V_2_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+
+State 3 <SV = 2> <Delay = 6.29>
+ST_3 : Operation 61 [1/1] (1.28ns)   --->   "%next_urem = add i6 1, %phi_urem"   --->   Operation 61 'add' 'next_urem' <Predicate = (!exitcond5)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_cast = zext i7 %tmp to i64" [bi_lstm/src/rnn.cpp:343]   --->   Operation 62 'zext' 'tmp_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%Weight_fc2_V_0_addr_1 = getelementptr [100 x i7]* @Weight_fc2_V_0, i64 0, i64 %tmp_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 63 'getelementptr' 'Weight_fc2_V_0_addr_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%Weight_fc2_V_1_addr_1 = getelementptr [100 x i7]* @Weight_fc2_V_1, i64 0, i64 %tmp_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 64 'getelementptr' 'Weight_fc2_V_1_addr_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%Weight_fc2_V_2_addr_1 = getelementptr [100 x i7]* @Weight_fc2_V_2, i64 0, i64 %tmp_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 65 'getelementptr' 'Weight_fc2_V_2_addr_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%Weight_fc2_V_3_addr_1 = getelementptr [100 x i7]* @Weight_fc2_V_3, i64 0, i64 %tmp_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 66 'getelementptr' 'Weight_fc2_V_3_addr_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%Weight_fc2_V_4_addr_1 = getelementptr [100 x i7]* @Weight_fc2_V_4, i64 0, i64 %tmp_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 67 'getelementptr' 'Weight_fc2_V_4_addr_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%arrayNo_cast = zext i6 %phi_urem to i32" [bi_lstm/src/rnn.cpp:340]   --->   Operation 68 'zext' 'arrayNo_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (1.53ns)   --->   "%next_mul = add i13 103, %phi_mul"   --->   Operation 69 'add' 'next_mul' <Predicate = (!exitcond5)> <Delay = 1.53> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/2] (1.75ns)   --->   "%fc1_out_0_V_load = load i16* %fc1_out_0_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 70 'load' 'fc1_out_0_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 71 [1/2] (1.75ns)   --->   "%fc1_out_1_V_load = load i16* %fc1_out_1_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 71 'load' 'fc1_out_1_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 72 [1/2] (1.75ns)   --->   "%fc1_out_2_V_load = load i16* %fc1_out_2_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 72 'load' 'fc1_out_2_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 73 [1/2] (1.75ns)   --->   "%fc1_out_3_V_load = load i16* %fc1_out_3_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 73 'load' 'fc1_out_3_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 74 [1/2] (1.75ns)   --->   "%fc1_out_4_V_load = load i16* %fc1_out_4_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 74 'load' 'fc1_out_4_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 75 [1/2] (1.75ns)   --->   "%fc1_out_5_V_load = load i16* %fc1_out_5_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 75 'load' 'fc1_out_5_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 76 [1/2] (1.75ns)   --->   "%fc1_out_6_V_load = load i16* %fc1_out_6_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 76 'load' 'fc1_out_6_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 77 [1/2] (1.75ns)   --->   "%fc1_out_7_V_load = load i16* %fc1_out_7_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 77 'load' 'fc1_out_7_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 78 [1/2] (1.75ns)   --->   "%fc1_out_8_V_load = load i16* %fc1_out_8_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 78 'load' 'fc1_out_8_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 79 [1/2] (1.75ns)   --->   "%fc1_out_9_V_load = load i16* %fc1_out_9_V_addr, align 2" [bi_lstm/src/rnn.cpp:340]   --->   Operation 79 'load' 'fc1_out_9_V_load' <Predicate = (!exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_3 : Operation 80 [1/1] (1.79ns)   --->   "%fc1_V = call i16 @_ssdm_op_Mux.ap_auto.10i16.i32(i16 %fc1_out_0_V_load, i16 %fc1_out_1_V_load, i16 %fc1_out_2_V_load, i16 %fc1_out_3_V_load, i16 %fc1_out_4_V_load, i16 %fc1_out_5_V_load, i16 %fc1_out_6_V_load, i16 %fc1_out_7_V_load, i16 %fc1_out_8_V_load, i16 %fc1_out_9_V_load, i32 %arrayNo_cast)" [bi_lstm/src/rnn.cpp:340]   --->   Operation 80 'mux' 'fc1_V' <Predicate = (!exitcond5)> <Delay = 1.79> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (2.13ns)   --->   "%tmp_17 = icmp sgt i16 %fc1_V, 0" [bi_lstm/src/rnn.cpp:340]   --->   Operation 81 'icmp' 'tmp_17' <Predicate = (!exitcond5)> <Delay = 2.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_118 = trunc i16 %fc1_V to i15" [bi_lstm/src/rnn.cpp:343]   --->   Operation 82 'trunc' 'tmp_118' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.60ns)   --->   "%tmp_119 = select i1 %tmp_17, i15 %tmp_118, i15 0" [bi_lstm/src/rnn.cpp:340]   --->   Operation 83 'select' 'tmp_119' <Predicate = (!exitcond5)> <Delay = 0.60> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 84 [1/2] (2.77ns)   --->   "%Weight_fc2_V_0_load = load i7* %Weight_fc2_V_0_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 84 'load' 'Weight_fc2_V_0_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%lhs_V_3 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_0_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 85 'bitconcatenate' 'lhs_V_3' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 86 [2/2] (2.77ns)   --->   "%Weight_fc2_V_0_load_1 = load i7* %Weight_fc2_V_0_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 86 'load' 'Weight_fc2_V_0_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%lhs_V_3_1 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_1_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 87 'bitconcatenate' 'lhs_V_3_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 88 [1/2] (2.77ns)   --->   "%Weight_fc2_V_1_load = load i7* %Weight_fc2_V_1_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 88 'load' 'Weight_fc2_V_1_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%lhs_V_3_2 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_2_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 89 'bitconcatenate' 'lhs_V_3_2' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 90 [2/2] (2.77ns)   --->   "%Weight_fc2_V_1_load_1 = load i7* %Weight_fc2_V_1_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 90 'load' 'Weight_fc2_V_1_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%lhs_V_3_3 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_3_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 91 'bitconcatenate' 'lhs_V_3_3' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 92 [1/2] (2.77ns)   --->   "%Weight_fc2_V_2_load = load i7* %Weight_fc2_V_2_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 92 'load' 'Weight_fc2_V_2_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%lhs_V_3_4 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_4_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 93 'bitconcatenate' 'lhs_V_3_4' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_3 : Operation 94 [2/2] (2.77ns)   --->   "%Weight_fc2_V_2_load_1 = load i7* %Weight_fc2_V_2_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 94 'load' 'Weight_fc2_V_2_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 95 [2/2] (2.77ns)   --->   "%Weight_fc2_V_3_load_1 = load i7* %Weight_fc2_V_3_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 95 'load' 'Weight_fc2_V_3_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_3 : Operation 96 [2/2] (2.77ns)   --->   "%Weight_fc2_V_4_load_1 = load i7* %Weight_fc2_V_4_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 96 'load' 'Weight_fc2_V_4_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+
+State 4 <SV = 3> <Delay = 8.32>
+ST_4 : Operation 97 [1/1] (1.07ns)   --->   "%tmp_116 = icmp ult i6 %next_urem, 10"   --->   Operation 97 'icmp' 'tmp_116' <Predicate = (!exitcond5)> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [1/1] (0.97ns)   --->   "%idx_urem = select i1 %tmp_116, i6 %next_urem, i6 0"   --->   Operation 98 'select' 'idx_urem' <Predicate = (!exitcond5)> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%Weight_fc2_V_3_addr = getelementptr [100 x i7]* @Weight_fc2_V_3, i64 0, i64 %tmp_16" [bi_lstm/src/rnn.cpp:343]   --->   Operation 99 'getelementptr' 'Weight_fc2_V_3_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%Weight_fc2_V_4_addr = getelementptr [100 x i7]* @Weight_fc2_V_4, i64 0, i64 %tmp_16" [bi_lstm/src/rnn.cpp:343]   --->   Operation 100 'getelementptr' 'Weight_fc2_V_4_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_18_cast_cast = zext i15 %tmp_119 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 101 'zext' 'tmp_18_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%r_V_6_cast_cast = sext i7 %Weight_fc2_V_0_load to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 102 'sext' 'r_V_6_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5)   --->   "%r_V_9 = mul i22 %r_V_6_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 103 'mul' 'r_V_9' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 104 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5)   --->   "%r_V_9_cast = sext i22 %r_V_9 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 104 'sext' 'r_V_9_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5 = add i23 %r_V_9_cast, %lhs_V_3" [bi_lstm/src/rnn.cpp:343]   --->   Operation 105 'add' 'ret_V_5' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%fc2_out_0_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 106 'partselect' 'fc2_out_0_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 107 [1/2] (2.77ns)   --->   "%Weight_fc2_V_0_load_1 = load i7* %Weight_fc2_V_0_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 107 'load' 'Weight_fc2_V_0_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%r_V_6_1_cast_cast = sext i7 %Weight_fc2_V_0_load_1 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 108 'sext' 'r_V_6_1_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_1)   --->   "%r_V_9_1 = mul i22 %r_V_6_1_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 109 'mul' 'r_V_9_1' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 110 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_1)   --->   "%r_V_9_1_cast = sext i22 %r_V_9_1 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 110 'sext' 'r_V_9_1_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_1 = add i23 %r_V_9_1_cast, %lhs_V_3_1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 111 'add' 'ret_V_5_1' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%fc2_out_1_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_1, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 112 'partselect' 'fc2_out_1_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%r_V_6_2_cast_cast = sext i7 %Weight_fc2_V_1_load to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 113 'sext' 'r_V_6_2_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_2)   --->   "%r_V_9_2 = mul i22 %r_V_6_2_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 114 'mul' 'r_V_9_2' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 115 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_2)   --->   "%r_V_9_2_cast = sext i22 %r_V_9_2 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 115 'sext' 'r_V_9_2_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_2 = add i23 %r_V_9_2_cast, %lhs_V_3_2" [bi_lstm/src/rnn.cpp:343]   --->   Operation 116 'add' 'ret_V_5_2' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%fc2_out_2_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_2, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 117 'partselect' 'fc2_out_2_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 118 [1/2] (2.77ns)   --->   "%Weight_fc2_V_1_load_1 = load i7* %Weight_fc2_V_1_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 118 'load' 'Weight_fc2_V_1_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%r_V_6_3_cast_cast = sext i7 %Weight_fc2_V_1_load_1 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 119 'sext' 'r_V_6_3_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_3)   --->   "%r_V_9_3 = mul i22 %r_V_6_3_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 120 'mul' 'r_V_9_3' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 121 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_3)   --->   "%r_V_9_3_cast = sext i22 %r_V_9_3 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 121 'sext' 'r_V_9_3_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 122 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_3 = add i23 %r_V_9_3_cast, %lhs_V_3_3" [bi_lstm/src/rnn.cpp:343]   --->   Operation 122 'add' 'ret_V_5_3' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%fc2_out_3_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_3, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 123 'partselect' 'fc2_out_3_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%r_V_6_4_cast_cast = sext i7 %Weight_fc2_V_2_load to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 124 'sext' 'r_V_6_4_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 125 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_4)   --->   "%r_V_9_4 = mul i22 %r_V_6_4_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 125 'mul' 'r_V_9_4' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 126 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_4)   --->   "%r_V_9_4_cast = sext i22 %r_V_9_4 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 126 'sext' 'r_V_9_4_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_4 = add i23 %r_V_9_4_cast, %lhs_V_3_4" [bi_lstm/src/rnn.cpp:343]   --->   Operation 127 'add' 'ret_V_5_4' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%fc2_out_4_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_4, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 128 'partselect' 'fc2_out_4_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 129 [1/2] (2.77ns)   --->   "%Weight_fc2_V_2_load_1 = load i7* %Weight_fc2_V_2_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 129 'load' 'Weight_fc2_V_2_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "%lhs_V_3_5 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_5_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 130 'bitconcatenate' 'lhs_V_3_5' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 131 [2/2] (2.77ns)   --->   "%Weight_fc2_V_3_load = load i7* %Weight_fc2_V_3_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 131 'load' 'Weight_fc2_V_3_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 132 [1/1] (0.00ns)   --->   "%lhs_V_3_6 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_6_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 132 'bitconcatenate' 'lhs_V_3_6' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 133 [1/2] (2.77ns)   --->   "%Weight_fc2_V_3_load_1 = load i7* %Weight_fc2_V_3_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 133 'load' 'Weight_fc2_V_3_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 134 [1/1] (0.00ns)   --->   "%lhs_V_3_7 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_7_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 134 'bitconcatenate' 'lhs_V_3_7' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 135 [2/2] (2.77ns)   --->   "%Weight_fc2_V_4_load = load i7* %Weight_fc2_V_4_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 135 'load' 'Weight_fc2_V_4_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "%lhs_V_3_8 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_8_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 136 'bitconcatenate' 'lhs_V_3_8' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_4 : Operation 137 [1/2] (2.77ns)   --->   "%Weight_fc2_V_4_load_1 = load i7* %Weight_fc2_V_4_addr_1, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 137 'load' 'Weight_fc2_V_4_load_1' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_4 : Operation 138 [1/1] (0.00ns)   --->   "%lhs_V_3_9 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %fc2_out_V_9_out, i7 0)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 138 'bitconcatenate' 'lhs_V_3_9' <Predicate = (!exitcond5)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 8.32>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str48)" [bi_lstm/src/rnn.cpp:338]   --->   Operation 139 'specregionbegin' 'tmp_s' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str22) nounwind" [bi_lstm/src/rnn.cpp:339]   --->   Operation 140 'specpipeline' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 141 [1/1] (0.00ns)   --->   "%r_V_6_5_cast_cast = sext i7 %Weight_fc2_V_2_load_1 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 141 'sext' 'r_V_6_5_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 142 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_5)   --->   "%r_V_9_5 = mul i22 %r_V_6_5_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 142 'mul' 'r_V_9_5' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 143 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_5)   --->   "%r_V_9_5_cast = sext i22 %r_V_9_5 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 143 'sext' 'r_V_9_5_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 144 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_5 = add i23 %r_V_9_5_cast, %lhs_V_3_5" [bi_lstm/src/rnn.cpp:343]   --->   Operation 144 'add' 'ret_V_5_5' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%fc2_out_5_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_5, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 145 'partselect' 'fc2_out_5_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 146 [1/2] (2.77ns)   --->   "%Weight_fc2_V_3_load = load i7* %Weight_fc2_V_3_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 146 'load' 'Weight_fc2_V_3_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%r_V_6_6_cast_cast = sext i7 %Weight_fc2_V_3_load to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 147 'sext' 'r_V_6_6_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 148 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_6)   --->   "%r_V_9_6 = mul i22 %r_V_6_6_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 148 'mul' 'r_V_9_6' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 149 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_6)   --->   "%r_V_9_6_cast = sext i22 %r_V_9_6 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 149 'sext' 'r_V_9_6_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 150 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_6 = add i23 %r_V_9_6_cast, %lhs_V_3_6" [bi_lstm/src/rnn.cpp:343]   --->   Operation 150 'add' 'ret_V_5_6' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%fc2_out_6_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_6, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 151 'partselect' 'fc2_out_6_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%r_V_6_7_cast_cast = sext i7 %Weight_fc2_V_3_load_1 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 152 'sext' 'r_V_6_7_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 153 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_7)   --->   "%r_V_9_7 = mul i22 %r_V_6_7_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 153 'mul' 'r_V_9_7' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 154 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_7)   --->   "%r_V_9_7_cast = sext i22 %r_V_9_7 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 154 'sext' 'r_V_9_7_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 155 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_7 = add i23 %r_V_9_7_cast, %lhs_V_3_7" [bi_lstm/src/rnn.cpp:343]   --->   Operation 155 'add' 'ret_V_5_7' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 156 [1/1] (0.00ns)   --->   "%fc2_out_7_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_7, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 156 'partselect' 'fc2_out_7_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 157 [1/2] (2.77ns)   --->   "%Weight_fc2_V_4_load = load i7* %Weight_fc2_V_4_addr, align 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 157 'load' 'Weight_fc2_V_4_load' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_1P_BRAM">   --->   Core 61 'ROM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 7> <Depth = 100> <ROM>
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "%r_V_6_8_cast_cast = sext i7 %Weight_fc2_V_4_load to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 158 'sext' 'r_V_6_8_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 159 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_8)   --->   "%r_V_9_8 = mul i22 %r_V_6_8_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 159 'mul' 'r_V_9_8' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 160 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_8)   --->   "%r_V_9_8_cast = sext i22 %r_V_9_8 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 160 'sext' 'r_V_9_8_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_8 = add i23 %r_V_9_8_cast, %lhs_V_3_8" [bi_lstm/src/rnn.cpp:343]   --->   Operation 161 'add' 'ret_V_5_8' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 162 [1/1] (0.00ns)   --->   "%fc2_out_8_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_8, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 162 'partselect' 'fc2_out_8_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 163 [1/1] (0.00ns)   --->   "%r_V_6_9_cast_cast = sext i7 %Weight_fc2_V_4_load_1 to i22" [bi_lstm/src/rnn.cpp:343]   --->   Operation 163 'sext' 'r_V_6_9_cast_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 164 [1/1] (2.82ns) (grouped into DSP with root node ret_V_5_9)   --->   "%r_V_9_9 = mul i22 %r_V_6_9_cast_cast, %tmp_18_cast_cast" [bi_lstm/src/rnn.cpp:343]   --->   Operation 164 'mul' 'r_V_9_9' <Predicate = (!exitcond5)> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 165 [1/1] (0.00ns) (grouped into DSP with root node ret_V_5_9)   --->   "%r_V_9_9_cast = sext i22 %r_V_9_9 to i23" [bi_lstm/src/rnn.cpp:343]   --->   Operation 165 'sext' 'r_V_9_9_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (2.73ns) (root node of the DSP)   --->   "%ret_V_5_9 = add i23 %r_V_9_9_cast, %lhs_V_3_9" [bi_lstm/src/rnn.cpp:343]   --->   Operation 166 'add' 'ret_V_5_9' <Predicate = (!exitcond5)> <Delay = 2.73> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 5.55> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%fc2_out_9_V = call i16 @_ssdm_op_PartSelect.i16.i23.i32.i32(i23 %ret_V_5_9, i32 7, i32 22)" [bi_lstm/src/rnn.cpp:343]   --->   Operation 167 'partselect' 'fc2_out_9_V' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (0.00ns)   --->   "%empty_50 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str48, i32 %tmp_s)" [bi_lstm/src/rnn.cpp:345]   --->   Operation 168 'specregionend' 'empty_50' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 169 [1/1] (0.00ns)   --->   "br label %.preheader378" [bi_lstm/src/rnn.cpp:338]   --->   Operation 169 'br' <Predicate = (!exitcond5)> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 0.00>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } undef, i16 %fc2_out_V_9_out, 0" [bi_lstm/src/rnn.cpp:343]   --->   Operation 170 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 171 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv, i16 %fc2_out_V_8_out, 1" [bi_lstm/src/rnn.cpp:343]   --->   Operation 171 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_1, i16 %fc2_out_V_7_out, 2" [bi_lstm/src/rnn.cpp:343]   --->   Operation 172 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_2, i16 %fc2_out_V_6_out, 3" [bi_lstm/src/rnn.cpp:343]   --->   Operation 173 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_3, i16 %fc2_out_V_5_out, 4" [bi_lstm/src/rnn.cpp:343]   --->   Operation 174 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_4, i16 %fc2_out_V_4_out, 5" [bi_lstm/src/rnn.cpp:343]   --->   Operation 175 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 176 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_5, i16 %fc2_out_V_3_out, 6" [bi_lstm/src/rnn.cpp:343]   --->   Operation 176 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 177 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_6, i16 %fc2_out_V_2_out, 7" [bi_lstm/src/rnn.cpp:343]   --->   Operation 177 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 178 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_7, i16 %fc2_out_V_1_out, 8" [bi_lstm/src/rnn.cpp:343]   --->   Operation 178 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 179 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_8, i16 %fc2_out_V_0_out, 9" [bi_lstm/src/rnn.cpp:343]   --->   Operation 179 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 180 [1/1] (0.00ns)   --->   "ret { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_9" [bi_lstm/src/rnn.cpp:343]   --->   Operation 180 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.466ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('fc2_out[9].V') with incoming values : ('fc2_out[9].V', bi_lstm/src/rnn.cpp:343) [23]  (0.466 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', bi_lstm/src/rnn.cpp:338) [33]  (0 ns)
+	'getelementptr' operation ('Weight_fc2_V_0_addr', bi_lstm/src/rnn.cpp:343) [48]  (0 ns)
+	'load' operation ('Weight_fc2_V_0_load', bi_lstm/src/rnn.cpp:343) on array 'Weight_fc2_V_0' [89]  (2.77 ns)
+
+ <State 3>: 6.3ns
+The critical path consists of the following:
+	'load' operation ('fc1_out_0_V_load', bi_lstm/src/rnn.cpp:340) on array 'fc1_out_0_V' [65]  (1.75 ns)
+	'mux' operation ('fc1.V', bi_lstm/src/rnn.cpp:340) [84]  (1.79 ns)
+	'icmp' operation ('tmp_17', bi_lstm/src/rnn.cpp:340) [85]  (2.14 ns)
+	'select' operation ('tmp_119', bi_lstm/src/rnn.cpp:340) [87]  (0.607 ns)
+
+ <State 4>: 8.32ns
+The critical path consists of the following:
+	'load' operation ('Weight_fc2_V_0_load_1', bi_lstm/src/rnn.cpp:343) on array 'Weight_fc2_V_0' [96]  (2.77 ns)
+	'mul' operation of DSP[101] ('r_V_9_1', bi_lstm/src/rnn.cpp:343) [98]  (2.82 ns)
+	'add' operation of DSP[101] ('ret_V_5_1', bi_lstm/src/rnn.cpp:343) [101]  (2.73 ns)
+
+ <State 5>: 8.32ns
+The critical path consists of the following:
+	'load' operation ('Weight_fc2_V_3_load', bi_lstm/src/rnn.cpp:343) on array 'Weight_fc2_V_3' [131]  (2.77 ns)
+	'mul' operation of DSP[136] ('r_V_9_6', bi_lstm/src/rnn.cpp:343) [133]  (2.82 ns)
+	'add' operation of DSP[136] ('ret_V_5_6', bi_lstm/src/rnn.cpp:343) [136]  (2.73 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
